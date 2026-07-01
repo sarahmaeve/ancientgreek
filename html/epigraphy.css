@@ -1,0 +1,79 @@
+/* Shared styles — Epigraphy set:
+   epigraphy_resources.html
+   epigraphy_scholars.html */
+
+:root {
+  --ink: #1c1a17;
+  --muted: #5f574c;
+  --rule: #d8cfbf;
+  --paper: #faf6ee;
+  --accent: #7a4a1f;
+  --link: #8a3a12;
+  --box: #f2ead9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  line-height: 1.55;
+  font-size: 18px;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.4rem 5rem; }
+
+header.masthead { border-bottom: 3px double var(--accent); padding-bottom: 1.2rem; margin-bottom: 1.6rem; }
+h1 { font-size: 2rem; margin: 0 0 .3rem; letter-spacing: .3px; }
+h1 .grk { font-family: "GFS Didot", "Palatino Linotype", Palatino, serif; }
+.subtitle { color: var(--muted); font-style: italic; margin: 0; }
+.meta { color: var(--muted); font-size: .85rem; margin-top: .8rem; }
+h2 { font-size: 1.35rem; margin: 2.6rem 0 .4rem; padding-top: .6rem; border-top: 1px solid var(--rule); color: var(--accent); }
+h2 .n { color: var(--muted); font-size: .85em; margin-right: .4rem; }
+h3 { font-size: 1.05rem; margin: 1.4rem 0 .3rem; }
+p { margin: .5rem 0; }
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid rgba(138,58,18,.35); }
+a:hover { border-bottom-color: var(--link); }
+
+/* Resource lists */
+ul.res { list-style: none; padding: 0; margin: .6rem 0; }
+ul.res > li { padding: .7rem .9rem; margin: .5rem 0; background: var(--box); border-left: 3px solid var(--accent); border-radius: 3px; }
+ul.res > li .title { font-weight: 600; }
+ul.res > li .note { display: block; color: var(--muted); font-size: .9rem; margin-top: .2rem; }
+
+/* Badges */
+.badge { display: inline-block; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .68rem; line-height: 1.4; padding: .05rem .45rem; border-radius: 999px; margin-left: .35rem; vertical-align: middle; white-space: nowrap; }
+.b-free { background: #d9ecd2; color: #2e5720; }
+.b-cc { background: #d3e4f5; color: #1d4b74; }
+.b-pers { background: #f7e7c4; color: #7a5410; }
+.b-ask { background: #f3d9d2; color: #8a3a1f; }
+.b-sub { background: #e6dce9; color: #5a3a63; }
+
+.legend { font-size: .85rem; color: var(--muted); background: var(--box); padding: .8rem 1rem; border-radius: 5px; }
+.legend .badge { margin-left: 0; margin-right: .3rem; }
+
+/* Table of contents */
+nav.toc { background: var(--box); border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.3rem; margin: 1.6rem 0; }
+nav.toc strong { display: block; margin-bottom: .4rem; color: var(--accent); }
+nav.toc ol { margin: 0; padding-left: 1.3rem; columns: 2; column-gap: 2rem; }
+nav.toc li { margin: .15rem 0; break-inside: avoid; }
+
+/* Callout */
+.callout { background: #fff8e8; border: 1px solid #e6d3a0; border-radius: 6px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: .95rem; }
+.callout strong { color: var(--accent); }
+
+.grk { font-size: 1.05em; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .85em; background: #eee6d6; padding: .05rem .3rem; border-radius: 3px; }
+
+/* People lists (scholars directory) */
+ul.people { list-style: none; padding: 0; margin: .6rem 0; }
+ul.people > li { padding: .7rem .9rem; margin: .5rem 0; background: var(--box); border-left: 3px solid var(--accent); border-radius: 3px; }
+.who { font-weight: 700; font-size: 1.05rem; }
+.who .em { font-weight: 400; font-style: italic; color: var(--muted); font-size: .82rem; }
+.aff { display: block; font-size: .92rem; margin-top: .1rem; }
+.note { display: block; color: var(--muted); font-size: .88rem; margin-top: .2rem; }
+.links { display: block; font-size: .85rem; margin-top: .35rem; }
+.links a { margin-right: .15rem; }
+.sep { color: var(--rule); margin: 0 .3rem; }
+
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }

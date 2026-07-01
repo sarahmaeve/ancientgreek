@@ -1,0 +1,111 @@
+/* Shared styles — Byzantine Greek set:
+   pathway_to_byzantine_greek.html
+   byzantine_greek_reading_list_sources.html
+   further_reading_byzantine_greek.html */
+
+:root {
+  --ink: #1f1c16;
+  --paper: #faf7f0;
+  --accent: #7a3b2e;
+  --accent2: #2e5246;
+  --line: #d9d0bd;
+  --free: #2e5246;
+  --collection: #8a6d1f;
+  --commercial: #7a3b2e;
+  --uncertain: #999;
+  --stage: #3a4f7a;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.2rem;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0.6rem;
+}
+.subtitle {
+  color: #5a5448;
+  font-size: 0.98rem;
+  margin-bottom: 1.6rem;
+  font-style: italic;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  font-size: 0.82rem;
+  margin: 1.2rem 0 2rem;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.dot { width: 0.7em; height: 0.7em; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot.free { background: var(--free); }
+.dot.collection { background: var(--collection); }
+.dot.commercial { background: var(--commercial); }
+.dot.uncertain { background: var(--uncertain); }
+
+/* Tags */
+.tag { border-radius: 3px; padding: 0.02rem 0.4rem; font-size: 0.72rem; font-weight: 700; margin-left: 0.4rem; display: inline-block; }
+.tag.greek { background: #eef3ee; color: var(--free); border: 1px solid var(--free); }
+.tag.lang { background: #eef1f7; color: var(--stage); border: 1px solid var(--stage); }
+.tag.fr { background: #eef1f7; color: var(--stage); border: 1px solid var(--stage); }
+.tag.core { background: #f7eeee; color: var(--accent); border: 1px solid var(--accent); }
+.tag.ex { background: #f6efe0; color: var(--collection); border: 1px solid var(--collection); }
+
+/* Notice box */
+.notice {
+  background: #fff8e8;
+  border: 1px solid #e6d28a;
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.88rem;
+  margin-bottom: 2rem;
+}
+.notice strong { color: var(--accent); }
+
+/* Roadmap strip */
+.roadmap { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.5rem 0 2.5rem; font-size: 0.78rem; }
+.roadmap .step { background: var(--stage); color: #fff; padding: 0.4rem 0.7rem; border-radius: 4px; white-space: nowrap; }
+.roadmap .arrow { align-self: center; color: var(--stage); font-weight: 700; }
+
+/* Entry cards */
+.entry { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 1.1rem; background: #fff; overflow: hidden; }
+.entry-head { background: #f1ead9; padding: 0.65rem 1rem; font-size: 1.03rem; font-weight: 700; color: var(--ink); border-bottom: 1px solid var(--line); }
+.entry-head .core-flag { font-size: 0.7rem; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 3px; padding: 0.05rem 0.35rem; margin-left: 0.5rem; vertical-align: middle; }
+.entry-body { padding: 0.7rem 1.1rem 0.9rem; font-size: 0.93rem; }
+.src-row { display: flex; align-items: baseline; gap: 0.55rem; margin: 0.32rem 0; flex-wrap: wrap; }
+.src-row .dot { margin-top: 0.35em; }
+.src-label { font-weight: 600; min-width: 5.4rem; color: #4a4438; font-size: 0.83rem; text-transform: uppercase; letter-spacing: 0.02em; }
+.src-row a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted var(--accent2); }
+.src-row a:hover { color: var(--accent); }
+.note { color: #6b6356; font-size: 0.85rem; margin-top: 0.4rem; }
+.kind { font-style: italic; color: #8a8270; }
+
+/* Section headings */
+h2.section { margin-top: 2.6rem; font-size: 1.2rem; border-bottom: 1px solid var(--line); padding-bottom: 0.3rem; }
+h2.section .flag { font-weight: 400; font-size: 0.85rem; color: #8a8270; }
+
+/* Stage headings + intro (pathway / further reading) */
+h2.stage { margin-top: 3rem; font-size: 1.3rem; color: var(--stage); border-bottom: 2px solid var(--stage); padding-bottom: 0.4rem; }
+.stage-intro { font-size: 0.93rem; color: #4a4438; margin: 0.6rem 0 1.2rem; background: #fff; border-left: 3px solid var(--stage); padding: 0.7rem 1rem; }
+
+/* Two-column fork (pathway) */
+.fork { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0 1.8rem; }
+.fork-col { flex: 1; min-width: 260px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; }
+.fork-col h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--stage); }
+
+footer { margin-top: 3rem; font-size: 0.8rem; color: #8a8270; border-top: 1px solid var(--line); padding-top: 1rem; }
+footer a { color: var(--accent2); }
