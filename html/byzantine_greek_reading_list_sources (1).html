@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Harvard Byzantine Greek Reading List — Sourced Edition</title>
+<style>
+  :root {
+    --ink: #1f1c16;
+    --paper: #faf7f0;
+    --accent: #7a3b2e;
+    --accent2: #2e5246;
+    --line: #d9d0bd;
+    --free: #2e5246;
+    --collection: #8a6d1f;
+    --commercial: #7a3b2e;
+    --uncertain: #999;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.6rem;
+  }
+  .subtitle {
+    color: #5a5448;
+    font-size: 0.98rem;
+    margin-bottom: 1.6rem;
+    font-style: italic;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    font-size: 0.82rem;
+    margin: 1.2rem 0 2rem;
+    padding: 0.8rem 1rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .dot { width: 0.7em; height: 0.7em; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .dot.free { background: var(--free); }
+  .dot.collection { background: var(--collection); }
+  .dot.commercial { background: var(--commercial); }
+  .dot.uncertain { background: var(--uncertain); }
+  .tag.greek { background: #eef3ee; color: var(--free); border: 1px solid var(--free); border-radius: 3px; padding: 0.02rem 0.4rem; font-size: 0.72rem; font-weight: 700; margin-left: 0.4rem; }
+
+  .notice {
+    background: #fff8e8;
+    border: 1px solid #e6d28a;
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+  }
+  .notice strong { color: var(--accent); }
+
+  .entry {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 1.1rem;
+    background: #fff;
+    overflow: hidden;
+  }
+  .entry-head {
+    background: #f1ead9;
+    padding: 0.65rem 1rem;
+    font-size: 1.03rem;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+  .entry-head .core-flag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 0.05rem 0.35rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .entry-body { padding: 0.7rem 1.1rem 0.9rem; font-size: 0.93rem; }
+  .src-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    margin: 0.32rem 0;
+    flex-wrap: wrap;
+  }
+  .src-row .dot { margin-top: 0.35em; }
+  .src-label { font-weight: 600; min-width: 5.4rem; color: #4a4438; font-size: 0.83rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .src-row a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted var(--accent2); }
+  .src-row a:hover { color: var(--accent); }
+  .note { color: #6b6356; font-size: 0.85rem; margin-top: 0.4rem; }
+
+  h2.section {
+    margin-top: 2.6rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.3rem;
+  }
+  footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #8a8270;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>Harvard Byzantine Greek Reading List — Sourced Edition</h1>
+<p class="subtitle">Every item on Harvard Classics' PhD reading list for Byzantine Greek, with the original Greek text and a free/non-commercial source located wherever one exists, commercial publisher links otherwise. Compiled June 2026.</p>
+
+<div class="legend">
+  <span><span class="dot free"></span> Verified free, non-commercial source</span>
+  <span><span class="dot collection"></span> Free general collection (Patrologia Graeca, Bonn Corpus, or similar 19th-c. edition)</span>
+  <span><span class="dot commercial"></span> Commercial / publisher source</span>
+  <span><span class="dot uncertain"></span> Best lead found — not independently confirmed</span>
+  <span><span class="tag greek">GR</span> contains the original Greek</span>
+</div>
+
+<div class="notice">
+<strong>How to read this list.</strong> Every entry below now includes a source that gives you the Greek text itself, not just a translation — marked with the green <span class="tag greek">GR</span> tag. Where I could find a free Greek source, it's listed first; gloss/translation language preference (English, then French) is applied after that.
+<br><br>
+<strong>Update:</strong> a second pass through this list, searching titles in Greek script rather than English/transliteration, recovered several sources that the first pass missed entirely — most dramatically the Lament for Constantinople, which yielded nothing under its English title but turned up a full critical text within seconds once searched as Ανακάλημα της Κωνσταντινόπολης. Items recovered this way are noted explicitly. A genuine handful of items still have no confirmed free Greek source despite searching properly in Greek — these are specialist texts whose only edition is a 20th/21st-century critical apparatus (Teubner, Sources Chrétiennes, Brepols) that simply isn't digitized anywhere open; for those I give the standard scholarly edition rather than inventing a link.
+</div>
+
+<h2 class="section">Byzantine Greek Literature (Harvard's full list, A–Z)</h2>
+
+<div class="entry">
+  <div class="entry-head">Akathistos Hymn <span class="core-flag">CORE — no substitution</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/hoakathistoshymn0000orth" target="_blank">Archive.org — bilingual Greek–English edition (Papadeas)</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://www.goarch.org/akathisthymn" target="_blank">Greek Orthodox Archdiocese of America — English translation</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Alexios Makrembolites — Dialogue between Rich and Poor</div>
+  <div class="entry-body">
+    <div class="note">Re-searched directly in Greek (Διάλογος πλουσίων και πενήτων) — still no free full text located. Full title: <em>Διάλογος πλουσίων καὶ πενήτων· τίνας ἂν εἶπον λόγους πένητες πρὸς πλουσίους καὶ τίνας ἂν πρὸς τοὺς πένητας οὗτοι</em>, written Constantinople, Oct.–Nov. 1343. The Greek text was first edited by Ihor Ševčenko in "Alexios Makrembolites and his 'Dialogue between the Rich and the Poor'," <em>Zbornik Radova Vizantološkog Instituta</em> 6 (1960), 187–228 — check JSTOR or your university's database for that journal issue.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Anna Komnene — Alexiad</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/corpusscriptoru36theogoog" target="_blank">Archive.org — Corpus Scriptorum Historiae Byzantinae (Bonn Corpus), vols. I–II, Greek + Latin</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://archive.org/details/alexiad-english-dawes-1928" target="_blank">Archive.org — Dawes 1928 English translation</a> / <a href="https://en.wikisource.org/wiki/The_Alexiad" target="_blank">Wikisource</a></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (FR)</span> <a href="https://archive.org/details/anna-komnene-alexiade-tome-iii-livers-xi-xv-trans.-bernard-leib-paris-1937" target="_blank">Archive.org — Bernard Leib's 1937 French translation</a></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://www.penguin.co.uk/books/55402/the-alexiad-by-komnene-anna/9780140455276" target="_blank">Penguin Classics — Sewter/Frankopan (current standard English translation)</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Andrew of Crete — Great Canon</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 97 (Andrew of Crete) — browse via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">Documenta Catholica Omnia's site map</a> (find his entry under "20_30 Ecclesiae Patres Graeci") <span class="tag greek">GR</span></div>
+    <div class="note">English translations of the Great Canon circulate on Orthodox liturgical sites (goarch.org, oca.org) but I could not pin one durable URL in this pass.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Anthologia Graeca I, XV 1–20 and 28–50</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/greekanthology01pato" target="_blank">Archive.org — Loeb Vol. I (Books I–VI), Paton trans., 1916, Greek + English, public domain</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/in.ernet.dli.2015.12677" target="_blank">Archive.org — Loeb Vol. V (Books XIII–XVI), Paton trans., 1918, Greek + English</a> <span class="tag greek">GR</span></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Barlaam and Joasaph (1–6, 16–49)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/stjohndamasceneb00wood" target="_blank">Archive.org — Woodward & Mattingly's 1914 Loeb edition, Greek + English on facing pages</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://www.gutenberg.org/files/749/749-h/749-h.htm" target="_blank">Project Gutenberg — English text only</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Basil of Caesarea — To the Young Men on Ancient Greek Literature</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 31 (Basil) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">Documenta Catholica Omnia site map</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://www.hup.harvard.edu/books/9780674990952" target="_blank">Harvard University Press — Loeb edition (Greek + English)</a> <span class="tag greek">GR</span></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Christopher of Mytilene — Poems 1–21</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/diegedichtedesch00chriuoft" target="_blank">Archive.org — Kurtz's full 1903 critical edition, <em>Die Gedichte des Christophoros Mitylenaios</em>, complete Greek text</a> <span class="tag greek">GR</span></div>
+    <div class="note">Found on re-search using the Greek/German title directly. No confirmed free English translation; a modern Greek translation with introduction by Dimitra Moniou accompanies the most recent critical edition (De Groote, 2012) — commercial.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Digenes Akrites <span class="core-flag">CORE — no substitution</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://ia801209.us.archive.org/26/items/DigenesAkritesGreekEnglish/Digenes_Akrites_Greek_English.pdf" target="_blank">Archive.org — Mavrogordato's full bilingual edition (Oxford 1956/1970), Greek + English</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/stream/lesexploitsdedig06pari/lesexploitsdedig06pari_djvu.txt" target="_blank">Archive.org — Sathas & Legrand's edition (1875), Greek + French</a> <span class="tag greek">GR</span></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Entertaining Tale of Quadrupeds</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://dimodis.greeklanguage.gr/index.php?option=com_chronoforms&chronoform=showErgo&ergoID=76" target="_blank">Δημώδης Γραμματεία (Centre for the Greek Language) — entry for Παιδιόφραστος Διήγησις τῶν Ζῴων τῶν Τετραπόδων, with text and scholarly apparatus</a> <span class="tag greek">GR</span></div>
+    <div class="note">Found by searching the actual Greek title — missed entirely when searching the English title. Greek edition reference: Vasiliki Tsiouni, <em>Παιδιόφραστος Διήγησις τῶν Ζῴων τῶν Τετραπόδων</em> (Munich, 1972).</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial (EN)</span> <a href="https://cup.columbia.edu/book/an-entertaining-tale-of-quadrupeds/9780231114652" target="_blank">Columbia University Press — Nicholas & Baloglou, Greek + English</a> <span class="tag greek">GR</span></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Eumathios Makrembolites — Hysmine and Hysminias I–III</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/bub_gb_U5a2is9oylUC" target="_blank">Archive.org — Hercher's <em>Erotici Scriptores Graeci</em>, vol. 2 (1859), Greek text</a> <span class="tag greek">GR</span></div>
+    <div class="note">No confirmed free English translation; modern translation by Joan Burton, typically packaged in academic anthologies of the Byzantine novel — check Liverpool University Press's catalog.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Eusebius of Caesarea — Life of Constantine I, II</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 20 (Eusebius) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">Documenta Catholica Omnia site map</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://www.ccel.org/ccel/schaff/npnf201.html" target="_blank">CCEL — NPNF Series 2, Vol. 1 (Richardson translation)</a> / <a href="https://www.newadvent.org/fathers/25021.htm" target="_blank">New Advent</a></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://global.oup.com/academic/product/eusebius-life-of-constantine-9780198149917" target="_blank">Oxford University Press — Cameron & Hall (current scholarly standard, Greek consulted but English-only printed text)</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">George Gemistos (Pletho) — Funeral Oration for Kleope Malatesta</div>
+  <div class="entry-body">
+    <div class="note">Re-searched directly in Greek (Πλήθων, Επιτάφιος, Κλεόπη) — still no free source confirmed for this specific oration. Patrologia Graeca vol. 160 contains other Pletho works and may be worth checking via the <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a>, but I could not confirm it includes this particular text. C.M. Woodhouse's <em>Gemistos Plethon: The Last of the Hellenes</em> (Oxford, 1986) discusses and partially quotes it — commercial.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">George Pisides — Bellum Avaricum; On the Restoration of the True Cross</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/corpusscriptoru36theogoog" target="_blank">Archive.org — Corpus Scriptorum Historiae Byzantinae (Bonn Corpus), Greek + Latin</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 92 (George Pisides) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a> <span class="tag greek">GR</span></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Gregory of Cyprus — Autobiography</div>
+  <div class="entry-body">
+    <div class="note">No free Greek source located. Standard edition: William Lameere, <em>La tradition manuscrite de la correspondance de Grégoire de Chypre</em> (Brussels/Rome, 1937), which includes the autobiography; a partial English rendering appears in some studies of Byzantine autobiography (e.g. by Martin Hinterberger) but no standalone open edition was found.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Gregory of Nazianzus — Or. 15 On the Maccabees</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 35 (Gregory of Nazianzus) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a>, or directly browse <a href="https://www.documentacatholicaomnia.eu/04z/z_0329-0390__Gregorius_Nazianzenus__Orationes__EN.doc.html" target="_blank">DCO's Orationes index page</a> for this author <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://www.ccel.org/ccel/schaff/npnf207.html" target="_blank">CCEL — NPNF Series 2, Vol. 7 (select orations)</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">John Malalas — Chronicle (selections)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/corpusscriptoru36theogoog" target="_blank">Archive.org — Corpus Scriptorum Historiae Byzantinae (Bonn Corpus), Dindorf's edition, Greek + Latin</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Jeffreys, Jeffreys & Scott, <em>The Chronicle of John Malalas</em> (Byzantina Australiensia / Brill, 1986) — English translation</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">John Moschos — Spiritual Meadow (selections)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 87 (John Moschos) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> John Wortley, <em>The Spiritual Meadow</em> (Cistercian Publications) — English translation</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">John Tzetzes — Letters 1–8, 24–27; Histories IV–VI, VIII (selections)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (Histories only)</span> <a href="https://archive.org/details/historiarumvari00kiesgoog" target="_blank">Archive.org — Kiessling's 1826 edition of the <em>Historiae</em> (Chiliades), full Greek text</a> <span class="tag greek">GR</span></div>
+    <div class="note">Found by searching the Greek title (Ιωάννης Τζέτζης Χιλιάδες) directly. Covers the <em>Histories/Chiliades</em> portion of this entry, though it's the superseded 19th-century edition rather than the modern Leone text — line/chapter numbering may not align exactly with modern citations. No free source found for the <em>Letters</em>; modern critical editions remain commercial: P.A.M. Leone, <em>Ioannis Tzetzae Epistulae</em> (Teubner, 1972) and <em>Ioannis Tzetzae Historiae</em> (2nd ed., Galatina, 2007).</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Kallimachos and Chrysorrhoe</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://dimodis.greeklanguage.gr/index.php?option=com_chronoforms&chronoform=showErgo&ergoID=47" target="_blank">Δημώδης Γραμματεία (Centre for the Greek Language) — entry for Το κατά Καλλίμαχον και Χρυσορρόην ερωτικόν διήγημα</a> <span class="tag greek">GR</span></div>
+    <div class="note">Found by searching the Greek title directly. The PDF text I located there is presented as a substantial excerpt (verses 170–273) rather than confirmed complete — check the landing page for the full extent of what's offered. Standard scholarly edition is Carolina Cupane's, in <em>Romanzi cavallereschi bizantini</em> (UTET, Turin, 1995) — commercial, Greek + Italian.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Kassia — Troparion on the Sinful Woman</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://el.wikisource.org/wiki/%CE%A4%CF%81%CE%BF%CF%80%CE%AC%CF%81%CE%B9%CE%BF_%CF%84%CE%B7%CF%82_%CE%9A%CE%B1%CF%83%CF%83%CE%B9%CE%B1%CE%BD%CE%AE%CF%82" target="_blank">Greek Wikisource (Βικιθήκη) — full text of the troparion</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://el.wikisource.org/wiki/%CE%A3%CF%85%CE%B3%CE%B3%CF%81%CE%B1%CF%86%CE%AD%CE%B1%CF%82:%CE%9A%CE%B1%CF%83%CF%83%CE%B9%CE%B1%CE%BD%CE%AE" target="_blank">Greek Wikisource author page</a> — also has several of her other poems <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> Search "Hymn of Kassiani" on <a href="https://www.goarch.org" target="_blank">goarch.org</a> or <a href="https://www.oca.org" target="_blank">oca.org</a> for the full English Holy Wednesday text</div>
+    <div class="note">Found immediately once searched in Greek (Κασσιανή τροπάριο) rather than transliterated English — a clean miss in the first pass.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Lament for Constantinople (Ανακάλημα της Κωνσταντινόπολης)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://dimodis.greeklanguage.gr/images/pdf/29.pdf" target="_blank">Centre for the Greek Language (Κέντρο Ελληνικής Γλώσσας) — full polytonic text with manuscript folio references, reproducing Kriaras's 1965 critical edition</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://sarantakos.wordpress.com/2024/05/29/alwsis-2/" target="_blank">Nikos Sarantakos (philologist) — full monotonic text sourced from TLG, with line-by-line vocabulary glosses in the comments</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (FR)</span> <a href="https://gallica.bnf.fr/ark:/12148/bpt6k63798524.texteImage" target="_blank">Gallica (BnF) — Émile Legrand's 1875 editio princeps</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN, partial)</span> <a href="https://czasopisma.uni.lodz.pl/sceranea/article/download/26643/28518/76001" target="_blank">Open-access journal article (Studia Ceranea 15, 2025), quotes ~50 lines in Greek with English translation</a></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial (EN)</span> Eleni Kefala, full translation in <em>The Conquered: Byzantium and America on the Cusp of Modernity</em> (Dumbarton Oaks, 2020), pp. 30–37</div>
+    <div class="note">Originally missed entirely — my first search used the English title "Lament for Constantinople," which returns nothing useful. Searching the actual Greek title found all of the above immediately.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Leontios of Neapolis — Life of Symeon the Fool</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 93 (Leontios of Neapolis) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://www.ucpress.edu" target="_blank">University of California Press — Derek Krueger, <em>Symeon the Holy Fool</em> (includes full English translation)</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Michael Psellos — Encomium for his Mother; Essays on Euripides/Pisides and Heliodorus/Achilles Tatius</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Constantine Sathas, <em>Bibliotheca Graeca Medii Aevi</em>, vols. IV–V (Athens/Paris, 1874–76) — the original 19th-century edition of Psellos' minor works including these texts; search archive.org/HathiTrust directly by that title (I could not confirm a stable scan link in this pass) <span class="tag greek">GR</span></div>
+    <div class="note">No confirmed free English translation. Standard modern critical edition of the essays: Andrew Dyck, <em>Michael Psellus: The Essays on Euripides and George of Pisidia and on Heliodorus and Achilles Tatius</em> (Vienna, 1986) — commercial.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Narrative about the Construction of Hagia Sophia (Patria of Constantinople IV)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Theodor Preger, <em>Scriptores originum Constantinopolitanarum</em> (Leipzig, 1901–07) — Greek text of the Patria; search archive.org/HathiTrust directly by that title <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://www.hup.harvard.edu/books/9780674987349" target="_blank">Harvard University Press — Dumbarton Oaks Medieval Library, Albrecht Berger's translation, Greek + English</a> <span class="tag greek">GR</span></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Niketas Choniates — History (selections)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/corpusscriptoru36theogoog" target="_blank">Archive.org — Bonn Corpus, Bekker's edition, Greek + Latin</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://archive.org/details/o-city-of-byzantium-annals-of-niketas-choniates-ttranslated-by-harry-j-magoulias-1984" target="_blank">Archive.org — Magoulias's full English translation, "O City of Byzantium"</a></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://wsupress.wayne.edu/9780814317648/" target="_blank">Wayne State University Press — current print edition</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Paul the Silentiary — Ekphrasis of Hagia Sophia</div>
+  <div class="entry-body">
+    <div class="note">Re-searched in Greek (Παύλος Σιλεντιάριος, Έκφρασις) — still no free full Greek text of the Ekphrasis confirmed (Greek Wikisource has a Paul the Silentiary author page, but it only carries his short epigrams from the Palatine Anthology, not this much longer separate work). Modern critical edition: C. De Stefani (Teubner, 2011) — commercial. A complete English translation exists: P.N. Bell, in <em>Three Political Voices from the Age of Justinian</em> (Liverpool University Press, 2010) — commercial. Older translated excerpts (with some facing Greek) appear in W.R. Lethaby & Harold Swainson, <em>The Church of Sancta Sophia Constantinople</em> (London, 1894), an out-of-copyright title worth checking on archive.org directly.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Photios — Bibliotheca (selections); Homilies 3, 4</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> Immanuel Bekker's 1824 Greek edition, <em>Photii Bibliotheca</em> — on HathiTrust (search "Photii bibliotheca Bekker 1824") <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://archive.org/details/libraryofphotius00phot" target="_blank">Archive.org — Freese's 1920 English translation, "The Library of Photius"</a></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Cyril Mango's translation of the <em>Homilies</em> (Dumbarton Oaks)</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Procopius of Caesarea — Secret History 1.1–10 (Prol.), 6–18</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/b24750281_0006" target="_blank">Archive.org — Loeb Vol. VI, Dewing trans., Greek + English on facing pages</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Procopius/Anecdota/home.html" target="_blank">LacusCurtius — Dewing translation, English only</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Ptochoprodromos 1, 3</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://dimodis.greeklanguage.gr/index.php?chronoform=showErgo&ergoID=51&option=com_chronoforms" target="_blank">Δημώδης Γραμματεία (Centre for the Greek Language) — Πτωχοπρόδρομος entry, with text (incl. <a href="https://dimodis.greeklanguage.gr/images/pdf/E051.pdf" target="_blank">PDF excerpt</a>) and scholarly introduction by Zoi Georgiadou</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/carminagraecamed00wagnuoft" target="_blank">Archive.org — Wagner's <em>Carmina Graeca Medii Aevi</em> (1874)</a> <span class="tag greek">GR</span></div>
+    <div class="note">No confirmed free English translation; modern critical edition is Hans Eideneier's <em>Ptochoprodromos</em> (Köln, 1991), German apparatus, commercial.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Romanos Melodos — Kontakia 10, 35, 37, 40, 54 (Grosdidier de Matons numbering)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/analectasacrasp05pitrgoog" target="_blank">Archive.org — J.B. Pitra, <em>Analecta Sacra</em>, vol. 1 (1876), Greek text of 29 kontakia</a> <span class="tag greek">GR</span></div>
+    <div class="note">Pitra's selection and numbering predate the standard modern Maas–Trypanis edition (Oxford, 1963–70, commercial, not located free), so cross-check which kontakia by content/incipit rather than number.</div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free (EN)</span> <a href="https://archive.org/details/kontakiaofromano00roma" target="_blank">Archive.org — Marjorie Carpenter's English translation</a> / <a href="https://github.com/brianglass/anastasis" target="_blank">GitHub mirror of Archimandrite Ephrem Lash's translations</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Symeon Metaphrastes — Life of Pelagia</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 116 (Symeon Metaphrastes' menologion) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a> <span class="tag greek">GR</span></div>
+    <div class="note">No standalone free English translation confirmed; the Pelagia legend is translated in Benedicta Ward, <em>Harlots of the Desert</em> (Cistercian Publications) — commercial.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Symeon the New Theologian — Hymns 2–7, 35</div>
+  <div class="entry-body">
+    <div class="note">No free Greek source confirmed. Critical edition: Athanasios Kambylis, Sources Chrétiennes 156, 174, 196 (Paris, Cerf), Greek + French apparatus — commercial. (Note: the Hymns were not included in Migne's Patrologia Graeca, so PG is not a fallback here.) English translation: Daniel K. Griggs, <em>Divine Eros: Hymns of St. Symeon the New Theologian</em> (St Vladimir's Seminary Press) — commercial.</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <a href="https://www.svspress.com" target="_blank">St Vladimir's Seminary Press</a></div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Synesius of Cyrene — On Kingship</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> Patrologia Graeca vol. 66 (Synesius) — via <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">DCO site map</a> <span class="tag greek">GR</span></div>
+    <div class="note">Augustine FitzGerald's 1930 English translation, <em>The Essays and Hymns of Synesius of Cyrene</em>, is old enough to likely be free on archive.org, but I did not confirm a direct scan link in this pass.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Theodore II Laskaris — Encomium of Nicaea</div>
+  <div class="entry-body">
+    <div class="note">No free Greek source confirmed; this is a very specialized text. Greek text in L. Tartaglia (ed.), <em>Theodorus II Ducas Lascaris: Opuscula rhetorica</em> (Teubner, Munich/Leipzig, 2000) — commercial, no free version located.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Theodore Metochites — Semeioseis gnomikai 1, 8, 18, 19, 24, 25, 28, 37, 44</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://gallica.bnf.fr/ark:/12148/bpt6k6281997m" target="_blank">Gallica (BnF) — Müller & Kiessling's 1821 edition, <em>Theodori Metochitae Miscellanea philosophica et historica</em>, full Greek text</a> <span class="tag greek">GR</span></div>
+    <div class="note">Found by searching the Greek title (Θεόδωρος Μετοχίτης, Σημειώσεις γνωμικαί) directly — also called <em>Ὑπομνηματισμοὶ καὶ σημειώσεις γνωμικαί</em> in Greek. This is the original 19th-century edition (120 essays); the modern critical edition/translation with English on facing pages is Karin Hult, <em>Theodore Metochites on Ancient Authors and Philosophy: Semeioseis Gnomikai 1–26 & 71</em> (Göteborg, 2002/2016) — commercial, though some Gothenburg University publications are deposited open-access in the GUPEA repository (gupea.ub.gu.se), worth checking directly.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Theodore Prodromos — Katomyomachia; Rhodanthe and Dosikles I–III, VIII, IX</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/bub_gb_U5a2is9oylUC" target="_blank">Archive.org — Hercher's <em>Erotici Scriptores Graeci</em>, vol. 2 (1859), Greek text</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Elizabeth Jeffreys, <em>Four Byzantine Novels</em> (Liverpool University Press) — English translation</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Theophanes Confessor — Chronographia (selections)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/bub_gb_TnRHAAAAYAAJ" target="_blank">Archive.org — de Boor's critical Greek edition</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot collection"></span><span class="src-label">Free</span> <a href="https://archive.org/details/chronographia00bekkgoog" target="_blank">Archive.org — Bonn Corpus edition (Classen/Bekker), Greek + Latin</a> <span class="tag greek">GR</span></div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Mango & Scott, <em>The Chronicle of Theophanes Confessor</em> (Oxford University Press) — current standard English translation</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Timarion</div>
+  <div class="entry-body">
+    <div class="note">No free Greek source confirmed. The text was first published by Karl Benedikt Hase with Latin translation and notes in <em>Notices et extraits des manuscrits de la Bibliothèque impériale</em>, vol. IX (Paris, 1813) — old enough to be public domain and possibly on Gallica (gallica.bnf.fr) given its French Imperial Library origin, but I could not confirm a working link. Standard modern Greek edition: R. Romano, <em>Pseudo-Luciano, Timarione</em> (Naples, 1974) — commercial.</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Barry Baldwin, <em>Timarion</em> (Wayne State University Press) — English translation. Given that the Choniates volume in this same "Byzantine Texts in Translation" series turned out to be freely scanned on archive.org, it's worth searching archive.org directly for "Timarion Baldwin" as a next step.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Δημώδης Γραμματεία / Centre for the Greek Language vernacular literature portal <span class="tag greek">GR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://dimodis.greeklanguage.gr/" target="_blank">dimodis.greeklanguage.gr</a></div>
+    <div class="note">A state-run (Greek Ministry of Education / Centre for the Greek Language) digital portal for medieval and early modern vernacular Greek literature — texts, scholarly introductions, and often full PDFs. This single resource resolved several entries in this list that turned up nothing when searched in English: the Lament for Constantinople, Ptochoprodromos, Kallimachos and Chrysorrhoe, and the Entertaining Tale of Quadrupeds. Worth browsing directly for any other vernacular Byzantine text — its catalog also covers Digenes Akrites, Belthandros and Chrysantza, Livistros and Rodamne, the Chronicle of the Morea, and more.</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">Patrologia Graeca (Migne, 161 vols., Greek + Latin) <span class="tag greek">GR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://www.documentacatholicaomnia.eu/a_1003_Bibliothecae_Partes_seu_'Site_Map'.html" target="_blank">Documenta Catholica Omnia — site map, browsable by author</a></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> Complete set also mirrored on <a href="https://archive.org" target="_blank">archive.org</a> (search "Patrologia Graeca volume [number]")</div>
+    <div class="note">Covers: Basil, Gregory of Nazianzus, Andrew of Crete, Eusebius, Synesius, John Moschos, Leontios of Neapolis, Photios, George Pisides, Symeon Metaphrastes, Niketas Choniates, Theophanes, John Malalas, Anna Komnene, and most other patristic/historical authors on this list, in the original Greek with facing Latin translation.</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">Corpus Scriptorum Historiae Byzantinae ("Bonn Corpus," 50 vols., Greek + Latin) <span class="tag greek">GR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/corpusscriptoru36theogoog" target="_blank">Archive.org — full set</a></div>
+    <div class="note">Covers the standard 19th-century Greek editions of: Niketas Choniates, Anna Komnene, Theophanes, John Malalas, George Pisides, John Kinnamos, George Kedrenos, Constantine VII, and most other Byzantine chronicle/historical writers on this list.</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">Hercher's <em>Erotici Scriptores Graeci</em> (1858–59, Greek only) <span class="tag greek">GR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/bub_gb_U5a2is9oylUC" target="_blank">Archive.org</a></div>
+    <div class="note">Vol. 2 covers the Byzantine prose romances: Eumathios (Eustathios) Makrembolites' <em>Hysmine and Hysminias</em>, Theodore Prodromos' <em>Rhodanthe and Dosikles</em>, and Niketas Eugenianos.</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">Wagner's <em>Carmina Graeca Medii Aevi</em> (1874, Greek text of vernacular poems) <span class="tag greek">GR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/carminagraecamed00wagnuoft" target="_blank">Archive.org</a></div>
+    <div class="note">Covers a range of vernacular medieval Greek poems including the Ptochoprodromika; check its table of contents directly for exact coverage against your specific reading-list entries.</div>
+  </div>
+</div>
+<div class="entry">
+  <div class="entry-head">Pitra's <em>Analecta Sacra Spicilegio Solesmensi parata</em> (1876, vol. 1, Greek hymns) <span class="tag greek">GR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/analectasacrasp05pitrgoog" target="_blank">Archive.org</a></div>
+    <div class="note">Contains the Greek text of 29 kontakia of Romanos Melodos, using a different (older) numbering than the standard modern Maas–Trypanis edition.</div>
+  </div>
+</div>
+
+<footer>
+Compiled by searching publisher catalogs, archive.org, Wikisource, Project Gutenberg, CCEL/New Advent, Documenta Catholica Omnia, and academic library records as of June 2026. Items marked with the gray dot or framed as a "note" reflect the best lead found rather than an independently confirmed working link — please verify before relying on them for citation.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greek Epigraphy &amp; Inscriptions — Resource Guide</title>
+<style>
+  :root {
+    --ink: #1c1a17;
+    --muted: #5f574c;
+    --rule: #d8cfbf;
+    --paper: #faf6ee;
+    --accent: #7a4a1f;
+    --link: #8a3a12;
+    --box: #f2ead9;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    line-height: 1.55;
+    font-size: 18px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.4rem 5rem; }
+  header.masthead {
+    border-bottom: 3px double var(--accent);
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
+  }
+  h1 { font-size: 2rem; margin: 0 0 .3rem; letter-spacing: .3px; }
+  h1 .grk { font-family: "GFS Didot", "Palatino Linotype", Palatino, serif; }
+  .subtitle { color: var(--muted); font-style: italic; margin: 0; }
+  .meta { color: var(--muted); font-size: .85rem; margin-top: .8rem; }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.6rem 0 .4rem;
+    padding-top: .6rem;
+    border-top: 1px solid var(--rule);
+    color: var(--accent);
+  }
+  h2 .n { color: var(--muted); font-size: .85em; margin-right: .4rem; }
+  h3 { font-size: 1.05rem; margin: 1.4rem 0 .3rem; }
+  p { margin: .5rem 0; }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid rgba(138,58,18,.35); }
+  a:hover { border-bottom-color: var(--link); }
+  ul.res { list-style: none; padding: 0; margin: .6rem 0; }
+  ul.res > li {
+    padding: .7rem .9rem;
+    margin: .5rem 0;
+    background: var(--box);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+  }
+  ul.res > li .title { font-weight: 600; }
+  ul.res > li .note { display: block; color: var(--muted); font-size: .9rem; margin-top: .2rem; }
+  .badge {
+    display: inline-block;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: .68rem;
+    line-height: 1.4;
+    padding: .05rem .45rem;
+    border-radius: 999px;
+    margin-left: .35rem;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .b-free   { background: #d9ecd2; color: #2e5720; }
+  .b-cc     { background: #d3e4f5; color: #1d4b74; }
+  .b-pers   { background: #f7e7c4; color: #7a5410; }
+  .b-ask    { background: #f3d9d2; color: #8a3a1f; }
+  .b-sub    { background: #e6dce9; color: #5a3a63; }
+  .legend { font-size: .85rem; color: var(--muted); background: var(--box); padding: .8rem 1rem; border-radius: 5px; }
+  .legend .badge { margin-left: 0; margin-right: .3rem; }
+  nav.toc {
+    background: var(--box);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1rem 1.3rem;
+    margin: 1.6rem 0;
+  }
+  nav.toc strong { display: block; margin-bottom: .4rem; color: var(--accent); }
+  nav.toc ol { margin: 0; padding-left: 1.3rem; columns: 2; column-gap: 2rem; }
+  nav.toc li { margin: .15rem 0; break-inside: avoid; }
+  .callout {
+    background: #fff8e8;
+    border: 1px solid #e6d3a0;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+  }
+  .callout strong { color: var(--accent); }
+  .grk { font-size: 1.05em; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .85em; background: #eee6d6; padding: .05rem .3rem; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>Greek Epigraphy &amp; Inscriptions <span class="grk">&mdash; ἐπιγραφαί</span></h1>
+  <p class="subtitle">A working guide to text corpora, images, squeezes, script archives, and self-study material</p>
+  <p class="meta">Compiled 1 July 2026 for personal study &middot; scope: learning the various forms of Ancient Greek through inscriptions.</p>
+  <p class="meta">See also the companion <a href="epigraphy_scholars.html">directory of living scholars</a> in the field.</p>
+</header>
+
+<p class="legend">
+  <span class="badge b-free">FREE / PD</span> reusable, public domain or open &nbsp;
+  <span class="badge b-cc">CC</span> Creative Commons (attribution/ShareAlike on redistribution) &nbsp;
+  <span class="badge b-pers">PERSONAL</span> free to use, personal study only &nbsp;
+  <span class="badge b-ask">ASK</span> terms unstated &mdash; confirm before publishing &nbsp;
+  <span class="badge b-sub">SUBSCRIPTION</span> paywalled / institutional
+</p>
+
+<nav class="toc">
+  <strong>Contents</strong>
+  <ol>
+    <li><a href="#corpora">Text corpora &amp; databases</a></li>
+    <li><a href="#translations">Translations &amp; commentary</a></li>
+    <li><a href="#squeezes">Squeeze collections</a></li>
+    <li><a href="#archaic">Archaic &amp; epichoric scripts</a></li>
+    <li><a href="#manuals">Open-access manuals (self-study spine)</a></li>
+    <li><a href="#teaching">Teaching resources &amp; courses</a></li>
+    <li><a href="#guides">Reference guides &amp; portals</a></li>
+    <li><a href="#french">French-language resources &amp; institutions</a></li>
+    <li><a href="#german">German-language resources &amp; institutions</a></li>
+    <li><a href="#greek">Greek-language resources &amp; institutions</a></li>
+    <li><a href="#byzantine">Late Roman &amp; Byzantine inscriptions</a></li>
+    <li><a href="#regional">Regional &amp; bilingual corpora</a></li>
+    <li><a href="#papyri">Adjacent field: Greek papyri</a></li>
+    <li><a href="#lowcountries">Low Countries &amp; Nordic scholarship</a></li>
+    <li><a href="#genres">Other scripts &amp; genres of written Greek</a></li>
+    <li><a href="#conventions">Editorial conventions &amp; digital tools</a></li>
+  </ol>
+</nav>
+
+<!-- ============================================================= -->
+<h2 id="corpora"><span class="n">1</span>Text corpora &amp; databases</h2>
+<p>The authoritative places to find the Greek text of an inscription.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://inscriptions.packhum.org/">PHI Greek Inscriptions (Packard Humanities Institute)</a></span>
+    <span class="badge b-pers">PERSONAL</span>
+    <span class="note">The field standard: ~210,000 searchable Greek inscription texts, Cornell + Ohio State + PHI.
+      License is <em>personal study only, no copies beyond personal use</em> &mdash; which is exactly your case.
+      Your primary text source. Landing page: <a href="https://packhum.org/texts.html">packhum.org/texts</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://ig.bbaw.de/">Inscriptiones Graecae (IG) &mdash; Berlin-Brandenburg Academy</a></span>
+    <span class="badge b-free">FREE / PD</span> <span class="badge b-sub">SUBSCRIPTION</span>
+    <span class="note">The great print corpus (successor to the 1815 <em>Corpus Inscriptionum Graecarum</em>), edited region by
+      region. Older volumes are public domain (HathiTrust / archive.org); newer editions remain in copyright, and PHI
+      reproduces IG texts digitally. The project&rsquo;s own <strong>Digital Scholarly Edition</strong>
+      (<a href="http://telota.bbaw.de/ig">telota.bbaw.de/ig</a>) gives open access to text, German + English translations,
+      and TEI/EpiDoc source for eleven volumes; project overview at <a href="https://eadh.org/projects/inscriptiones-graecae">EADH</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://wiki.digitalclassicist.org/PHI_Greek_Inscriptions">Digital Classicist Wiki &mdash; PHI Greek Inscriptions</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Concise description of PHI&rsquo;s scope, history, and coverage.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://wiki.digitalclassicist.org/Greek_and_Latin_texts_in_digital_form">Digital Classicist Wiki &mdash; Greek &amp; Latin texts in digital form</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">A broader index of digital text projects, useful for tracking down a specific corpus.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://classicalstudies.org/scs-blog/laura-gawlinski/review-packard-humanities-institutes-searchable-greek-inscriptions">SCS review of the PHI Searchable Greek Inscriptions</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Laura Gawlinski&rsquo;s practical walkthrough &mdash; how to actually search PHI effectively.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="translations"><span class="n">2</span>Translations &amp; commentary</h2>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://www.atticinscriptions.com/">Attic Inscriptions Online (AIO)</a></span>
+    <span class="badge b-cc">CC BY-SA</span>
+    <span class="note">2,000+ inscriptions of Athens &amp; Attica in annotated English translation, growing steadily.
+      CC BY-SA 3.0 &mdash; freely reusable (ShareAlike only bites if you redistribute). The best legal
+      &ldquo;spine&rdquo; if you ever build a reader. See also the <a href="https://www.atticinscriptions.com/papers/">AIO Papers</a>
+      series and the <a href="https://wiki.digitalclassicist.org/Attic_Inscriptions_Online">Digital Classicist entry</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.greekinscriptions.com/">Greek Inscriptions Online (GIO)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Modern-Greek translations of Ancient Greek inscriptions (8th c. BCE&ndash;late antiquity), by the Greek
+      Epigraphic Society and HERC in collaboration with AIO. Browsable by IG reference, region, date, or monument type,
+      with some images. Aimed at Greek students and teachers; free to read (reuse terms not stated).</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="squeezes"><span class="n">3</span>Squeeze collections</h2>
+<p>A <em>squeeze</em> is a paper impression pressed onto the stone &mdash; a modern object that records the letterforms
+   in relief. Raked-light photos of squeezes are often <strong>easier to read than photos of the stone itself</strong>,
+   and US-held collections sit outside Greek heritage-image jurisdiction.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://epigraphy.osu.edu/collections/greek-squeeze">Ohio State &mdash; Center for Epigraphical &amp; Palaeographical Studies (Greek squeezes)</a></span>
+    <span class="badge b-ask">ASK</span>
+    <span class="note">Large collection, mostly from Stephen V. Tracy; Attic and non-Attic. No reuse terms posted &mdash;
+      email <code>epig@osu.edu</code> if you ever want to publish. Fine to study/save.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://classics.cornell.edu/squeeze-collection">Cornell University Squeeze Collection</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">From the 1907&ndash;08 Cornell Expedition (incl. a famous early squeeze of the <em>Res Gestae</em> /
+      Monumentum Ancyranum). Digitized 2013; Cornell states the material is believed public domain by age.
+      Browse via <a href="https://digital.library.cornell.edu/collections">Cornell Digital Collections</a>
+      (example record: <a href="https://digital.library.cornell.edu/catalog/ss:172939">Erechtheion building inventory</a>).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.csad.ox.ac.uk/squeeze-collection-0">Oxford CSAD Squeeze Collection</a></span>
+    <span class="badge b-ask">ASK</span>
+    <span class="note">The Centre for the Study of Ancient Documents&rsquo; holdings and digitization work.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://albert.ias.edu/communities/d0bded61-66b7-4f14-aa5d-ba45d9dcf31a">Krateros &mdash; Squeezes of Greek Inscriptions at the IAS</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The digital repository (on the IAS &ldquo;Albert&rdquo; platform) for the Institute for Advanced Study&rsquo;s
+      collection &mdash; <strong>~30,000 squeezes</strong>, one of the world&rsquo;s largest, being published online with
+      NEH funding (current focus: <em>IG</em> II&sup2;, uploaded in IG-number order). Project home, media, and a useful
+      <a href="https://www.ias.edu/krateros/squeezes/pedagogy">Pedagogy page</a> at
+      <a href="https://www.ias.edu/krateros">ias.edu/krateros</a>; background on the digitization at the
+      <a href="https://www.ias.edu/news/squeeze-digitization-project-unlocking-text-ancient-inscriptions">IAS news piece</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.e-stampages.eu/">e-STAMPAGES &mdash; digital ectypothèque of Greek squeezes</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">French flagship: ~12,000 Greek inscription squeezes from the École française d&rsquo;Athènes and HiSoMA
+      (Lyon), with ~6,000 from Delos, Delphi, Thasos, and Philippi given 3D views. The online viewer offers
+      <em>shadow-variation</em> lighting to read the relief &mdash; excellent for letterform study. Free consultation;
+      opened 2019. (See also §8, French-language resources.)</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="archaic"><span class="n">4</span>Archaic &amp; epichoric scripts</h2>
+<p>The single best thread for &ldquo;various forms&rdquo;: the local alphabets (red/blue/green types) and dialects before
+   the standard Ionic alphabet. See also §15 for the syllabic scripts (Linear B, Cypriot) and the informal everyday hands.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="http://poinikastas.csad.ox.ac.uk/">Poinikastas &mdash; Epigraphic Sources for Early Greek Writing</a></span>
+    <span class="badge b-ask">ASK</span>
+    <span class="note">The digitized <strong>L.H. (Anne) Jeffery archive</strong> behind <em>Local Scripts of Archaic Greece</em>:
+      ~4,000 drawings and ~600 photographs of archaic epichoric inscriptions. Ideal for reading early letterforms.
+      Project pages: <a href="https://digital.humanities.ox.ac.uk/project/poinikastas-epigraphic-sources-early-greek-writing">DH@Oxford</a>,
+      <a href="https://www.csad.ox.ac.uk/poinikastas">CSAD</a>,
+      <a href="http://poinikastas.csad.ox.ac.uk/introduction.shtml">archive introduction</a>,
+      <a href="http://poinikastas.csad.ox.ac.uk/memoire/LHJ-introduction.html">LSAG introduction</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://library.oapen.org/handle/20.500.12657/51449">Early Greek Alphabetic Writing (OAPEN)</a></span>
+    <span class="badge b-cc">CC</span>
+    <span class="note">Open-access scholarly monograph on the earliest alphabetic writing.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://en.wikipedia.org/wiki/Epichoric_alphabet">Wikipedia &mdash; Archaic (epichoric) Greek alphabets</a></span>
+    <span class="badge b-cc">CC BY-SA</span>
+    <span class="note">Good orientation to Kirchhoff&rsquo;s red/blue/green/light-blue classification, with charts.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://en.wikipedia.org/wiki/Greek_alphabet">Wikipedia &mdash; Greek alphabet</a></span>
+    <span class="badge b-cc">CC BY-SA</span>
+    <span class="note">Development of the alphabet, letter-by-letter, including local variants.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.opoudjis.net/unicode/epigraphical.pdf">Nick Nicholas &mdash; Epigraphical letterforms &amp; Unicode (PDF)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Practical reference for representing epigraphic/archaic letterforms in Unicode &mdash; handy if you
+      transcribe digitally.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="manuals"><span class="n">5</span>Open-access manuals (self-study spine)</h2>
+<p>Older but public-domain works, mostly on <a href="https://catalog.hathitrust.org/">HathiTrust</a> and
+   <a href="https://archive.org/">archive.org</a>. Search by author/title.</p>
+<ul class="res">
+  <li>
+    <span class="title">Carl D. Buck, <em>Introduction to the Study of the Greek Dialects</em> (1910)</span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">The closest thing to the book you described: dialect-by-dialect grammar + graded selection of
+      inscriptions + glossary. Your best single model. (<a href="https://archive.org/search?query=Buck+Greek+dialects">archive.org search</a>)</span>
+  </li>
+  <li>
+    <span class="title">E. L. Hicks &amp; G. F. Hill, <em>A Manual of Greek Historical Inscriptions</em> (1901; orig. Hicks 1882)</span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Curated historical inscriptions with interpretive notes and a well-known visual guide to numeral/monetary
+      signs. (<a href="https://archive.org/search?query=Hicks+Hill+Greek+historical+inscriptions">archive.org search</a>)</span>
+  </li>
+  <li>
+    <span class="title">E. S. Roberts, <em>An Introduction to Greek Epigraphy</em> (1887&ndash;)</span>
+    <span class="badge b-free">FREE / PD</span> <span class="badge b-sub">SUBSCRIPTION</span>
+    <span class="note">Classic teaching manual; Vol. 1 traces the alphabet&rsquo;s development to the 5th c. BCE.
+      Modern reissue page at <a href="https://www.cambridge.org/core/books/an-introduction-to-greek-epigraphy/00FFEB2C7817309E995F310802EF7351">Cambridge</a>;
+      original volumes are public domain online.</span>
+  </li>
+  <li>
+    <span class="title">Helen M. Searles, <em>A Lexicographical Study of the Greek Inscriptions</em> (1898)</span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Specialized reference on inscriptional vocabulary.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="teaching"><span class="n">6</span>Teaching resources &amp; courses</h2>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://sarahemilybond.com/2016/03/10/epigraphy-enchiridion-a-list-of-open-access-books-for-teaching-greek-and-roman-inscriptions/">Epigraphy Enchiridion (Sarah E. Bond)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">A curated list of open-access books for teaching Greek &amp; Roman inscriptions &mdash; the source for
+      several manuals above. Also reposted at <a href="https://athenscentre.gr/epigraphy-enchiridion-a-list-of-open-access-books-for-teaching-greek-and-roman-inscriptions/">the Athens Centre</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://dagrs.berkeley.edu/courses/spring-2021/greek-and-latin-epigraphy">UC Berkeley &mdash; Greek &amp; Latin Epigraphy (Papazarkadas)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Graduate syllabus: alphabet origins, epichoric scripts, making/reading squeezes, dating texts.
+      A model for sequencing topics (though pitched above beginner level).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.greek-language.com/Epigraphy.html">Greek Language &amp; Linguistics &mdash; Epigraphy</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">A linguist&rsquo;s gateway page to epigraphic resources.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="guides"><span class="n">7</span>Reference guides &amp; portals</h2>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://www.eagle-network.eu/">EAGLE &mdash; Europeana network of Ancient Greek &amp; Latin Epigraphy</a></span>
+    <span class="badge b-cc">CC BY-SA</span>
+    <span class="note">Aggregates many epigraphic databases; most images are CC BY-SA. Includes the
+      <a href="https://www.eagle-network.eu/eagle-project/collections/epigraphic-database-heidelberg/">EDH collection</a>.
+      Background papers: <a href="http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/liuzzo/">ISAW</a>,
+      <a href="https://www.balisage.net/Proceedings/vol16/html/Liuzzo01/BalisageVol16-Liuzzo01.html">Balisage</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://wiki.digitalclassicist.org/Epigraphic_Database_Heidelberg">Epigraphic Database Heidelberg (EDH)</a></span>
+    <span class="badge b-cc">CC BY-SA 4.0</span>
+    <span class="note">Roman-provincial focus (more Latin than Greek), but texts as EpiDoc XML and most images are openly
+      licensed. Bulk data: <a href="https://zenodo.org/records/3575155">EpiDoc files on Zenodo</a>;
+      reuse overview: <a href="https://d-nb.info/1208941607/34">Data Reuse Options</a>;
+      images on <a href="https://commons.wikimedia.org/wiki/Category:Epigraphic_Database_Heidelberg">Wikimedia Commons</a>.</span>
+  </li>
+  <li>
+    <span class="title">University research guides</span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Curated link-hubs:
+      <a href="https://guides.library.upenn.edu/classical_studies/epigraphy">Penn</a> &middot;
+      <a href="https://researchguides.library.vanderbilt.edu/c.php?g=68601&amp;p=449507">Vanderbilt</a> &middot;
+      <a href="https://guides.lib.cua.edu/c.php?g=590082&amp;p=4080750">Catholic Univ.</a> &middot;
+      <a href="https://library.ics.sas.ac.uk/collection/digital-resources/open-access-resources">Hellenic &amp; Roman Library (open access)</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://brill.com/display/db/sego"><em>Supplementum Epigraphicum Graecum</em> (SEG Online)</a></span>
+    <span class="badge b-sub">SUBSCRIPTION</span>
+    <span class="note">Annual record of new Greek inscriptions and scholarship (Brill, Leiden). SEG Online adds faceted search by
+      date, place, topic, and type &mdash; the standard place to chase current bibliography on any text; institutional access usually needed.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.britishmuseum.org/collection/galleries/classical-inscriptions">British Museum &mdash; Classical Inscriptions</a></span>
+    <span class="badge b-cc">CC BY-NC-SA</span> <span class="badge b-free">FREE / PD</span>
+    <span class="note">Major holdings of Greek inscribed marbles. Search the
+      <a href="https://www.britishmuseum.org/collection">online collection</a>; most images are released under
+      CC BY-NC-SA 4.0 (fine for personal/non-commercial use), with a free high-res image request service. The
+      out-of-copyright catalogue <em>Greek Inscriptions in the British Museum</em> (GIBM, 4 vols, 1874&ndash;1916) is on
+      <a href="https://archive.org/details/GIBMIIVGreekInscriptionsInTheBritishMuseum4VolumesIn1File">archive.org</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.csad.ox.ac.uk/">Centre for the Study of Ancient Documents (CSAD), Oxford</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Institutional home for several resources here (Poinikastas, the squeeze collection, LGPN, 3D imaging).
+      Holds one of the world&rsquo;s largest squeeze collections and hosts the
+      <a href="https://www.lgpn.ox.ac.uk/">Lexicon of Greek Personal Names</a> and FAIR Epigraphy.</span>
+  </li>
+  <li>
+    <span class="title">Professional societies</span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Field hubs with news, links, and events: the
+      <a href="https://www.aiegl.org/">Association Internationale d&rsquo;Épigraphie Grecque et Latine (AIEGL)</a>, the
+      <a href="https://www.asgle.org/">American Society of Greek and Latin Epigraphy (ASGLE)</a>, and the
+      <a href="https://www.britishepigraphysociety.org/">British Epigraphy Society</a> &mdash; alongside the Greek Epigraphic Society (§10)
+      and SFER (§8).</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="french"><span class="n">8</span>French-language resources &amp; institutions</h2>
+<p>France runs some of the deepest epigraphic infrastructure in the field &mdash; especially for the sites the École
+   française d&rsquo;Athènes has excavated for 150 years (Delphi, Delos, Thasos, Argos&hellip;). Much of it is open access.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://www.e-stampages.eu/">e-STAMPAGES &mdash; ectypothèque numérique</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The flagship (also in §3): ~12,000 Greek squeezes from the EfA and HiSoMA, ~6,000 in 3D (Delos, Delphi,
+      Thasos, Philippi), with a shadow-variation viewer. Built with the University of Florida
+      <a href="https://www.digitalepigraphy.org/">Digital Epigraphy &amp; Archaeology Project</a>, coordinated by Michèle Brunet.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.efa.gr/">École française d&rsquo;Athènes (EfA)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">The institution behind Delphi and Delos. Holds ~6,000 epigraphic estampages plus manuscript and
+      iconographic archives; publisher of <em>Fouilles de Delphes</em> and the <em>Exploration archéologique de Délos</em>.
+      Excavation archives described in <a href="https://journals.openedition.org/nda/196?lang=en">Nouvelles de l&rsquo;archéologie</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.hisoma.mom.fr/">HiSoMA &mdash; Histoire et Sources des Mondes Antiques (Lyon)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Major French epigraphy laboratory (Maison de l&rsquo;Orient et de la Méditerranée); co-runs e-STAMPAGES and
+      the digital edition of <em>IGLS</em> (Inscriptions grecques et latines de la Syrie). Databases pairing texts with
+      photos, squeezes, and field notebooks.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.persee.fr/">Persée</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Open-access back-runs of core French scholarship: the
+      <a href="https://www.persee.fr/collection/bch"><em>Bulletin de correspondance hellénique</em></a> (BCH, vols 1&ndash;138, 1877&ndash;2014),
+      the <a href="https://www.persee.fr/collection/befar">BEFAR</a> monograph series, and the
+      <em>Revue des études grecques</em> (which carries the <em>Bulletin épigraphique</em>).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://journals.openedition.org/bch/">OpenEdition Journals &mdash; BCH</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Recent <em>Bulletin de correspondance hellénique</em> issues (from vol. 139) in open access, complementing
+      the Persée back-run above.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://aeg-reg.org/la-revue-des-etudes-grecques/bulletin-epigraphique-be/">Bulletin épigraphique (BE) &mdash; Association des Études Grecques</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The indispensable annual critical survey of new Greek epigraphic publications (in the REG). Since 2025 a
+      free, indexed, searchable <em>Bulletin épigraphique numérique</em> covers 2002&ndash;2021.</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://epigraphie-sfer.com/ressources/">SFER &mdash; Société Française d&rsquo;Épigraphie (resources / liens)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The French epigraphic society; its resources page is a curated hub of Greek &amp; Latin epigraphy links.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://archive.org/search?query=Fouilles+de+Delphes">Fouilles de Delphes (EfA, public domain volumes)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Older excavation volumes, including the epigraphic fascicles, scanned on archive.org.</span>
+  </li>
+</ul>
+<p style="color:var(--muted);font-size:.9rem;">Also worth knowing: the <strong>PETRAE</strong> system (Ausonius Institute, Bordeaux) is France&rsquo;s standard
+   epigraphic-record database, though chiefly Latin/Gaulish material.</p>
+
+<!-- ============================================================= -->
+<h2 id="german"><span class="n">9</span>German-language resources &amp; institutions</h2>
+<p>Germany has anchored Greek epigraphy since the 19th century &mdash; both the corpus <em>Inscriptiones Graecae</em> (§1)
+   and the <em>Epigraphic Database Heidelberg</em> (§7) are German projects. A few more:</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://arachne.dainst.org/">iDAI.objects Arachne</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The central object &amp; image database of the German Archaeological Institute (DAI) and the University
+      of Cologne &mdash; ~4.7 million records including ~2.9 million images (sculpture, objects, and inscribed monuments),
+      free to search. Reuse license varies per image; high-res may need ordering.
+      <a href="https://arachne.dainst.org/info/en/about.html">About</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://ifa.phil-fak.uni-koeln.de/forschung/zeitschriften-reihen/zeitschrift-fuer-papyrologie-und-epigraphik-zpe">Zeitschrift für Papyrologie und Epigraphik (ZPE)</a></span>
+    <span class="badge b-pers">PERSONAL</span>
+    <span class="note">The leading journal of papyrology and epigraphy (Habelt, since 1967). Older volumes (73&ndash;133,
+      1988&ndash;2000) are <a href="https://www.uni-koeln.de/phil-fak/ifa/zpe/downloads/">free to download for personal use</a>;
+      newer issues on JSTOR behind a moving wall.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://publications.dainst.org/journals/chiron">Chiron &amp; iDAI.publications (DAI)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note"><em>Chiron</em> (from the DAI&rsquo;s Kommission für Alte Geschichte und Epigraphik, Munich) and other DAI
+      journals in open access on the iDAI.publications platform.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://digi.ub.uni-heidelberg.de/diglit/collitz1884bd1">Sammlung der griechischen Dialekt-Inschriften (SGDI)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Collitz &amp; Bechtel&rsquo;s classic corpus of <strong>dialect inscriptions</strong> (Göttingen, 1884&ndash;1915),
+      arranged by region (Cyprus, Aeolic, Thessalian, Boeotian, Arcadian, Delphi&hellip;) &mdash; directly on point for studying
+      the &ldquo;various forms.&rdquo; Digitized at Heidelberg and on
+      <a href="https://archive.org/search?query=Sammlung+der+griechischen+Dialekt-Inschriften">archive.org</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.propylaeum.de/">Propylaeum</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The German virtual library (specialised information service) for classical studies at UB Heidelberg &mdash;
+      a gateway to digitized texts, journals, and databases.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="greek"><span class="n">10</span>Greek-language resources &amp; institutions</h2>
+<p>Resources produced in Greece &mdash; several with English interfaces &mdash; including the single largest collection of
+   inscriptions anywhere and a teaching portal built around the dialects.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://epigraphicmuseum.gr/en/epigraphic-museum/">Epigraphic Museum, Athens (Επιγραφικό Μουσείο)</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Founded 1885; holds <strong>the largest collection of ancient Greek inscriptions in the world</strong>
+      (8th c. BCE&ndash;Byzantine, mostly Athens/Attica). English interface. Runs a programme of electronic recording of the
+      inscriptions; for digital images/data contact <code>ema@culture.gr</code>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://ancdialects.greek-language.gr/">Ancient Greek Dialects portal (Centre for the Greek Language)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">A research-and-teaching portal (in Greek) on the ancient dialects: scholarly studies, an
+      <em>Introduction to Greek Epigraphy</em>, an inscriptions section, and bibliographic/epigraphic databases, with special
+      attention to thinly-attested dialects (e.g. Macedonian). One of the best fits for your &ldquo;various forms&rdquo; aim.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://digia.lit.auth.gr/the-digia-project/">DiGIA &mdash; Digitizing Greek Inscriptions &amp; Alphabets</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Aristotle University of Thessaloniki (Epigraphy &amp; Papyrology Lab): digitized squeezes, inscriptions
+      from Crete and Methoni, documentation of <strong>Archaic and Classical Cretan alphabets</strong> (with digital fonts),
+      and AR teaching materials. Open-access database.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://pandektis.ekt.gr/">Pandektis (Πανδέκτης) &mdash; National Hellenic Research Foundation</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">EIE/NHRF digital collections, including corpora of Greek &amp; Latin inscriptions of Upper Macedonia,
+      Aegean Thrace, and Achaïa &mdash; with text, translation, and commentary via the EIE&rsquo;s
+      <a href="https://helios-eie.ekt.gr/">Helios</a> repository.</span>
+  </li>
+  <li>
+    <span class="title">Greek Epigraphic Society (Ελληνική Επιγραφική Εταιρεία)</span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Founded 1985; publishes the journal <em>Horos</em> and, since 2012, the freely-available online journal
+      <em>Grammateion</em> (articles on inscriptions, ancient topography, and history).</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="byzantine"><span class="n">11</span>Late Roman &amp; Byzantine inscriptions</h2>
+<p>The corpora above are mostly Classical and Hellenistic. To follow Greek forward into late antiquity and Byzantium
+   &mdash; Christian, Late Roman, and medieval Greek &mdash; these are the specialists, and were the payoff of the Italian
+   and Turkish searches. Many Asia Minor texts also live in the German <em>Inschriften griechischer Städte aus Kleinasien</em>
+   (IK) series and in PHI.</p>
+<ul class="res">
+  <li>
+    <span class="title">Byzantine epigraphy &mdash; handbooks &amp; introductions</span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Orientation to the field, mostly from Andreas Rhoby (ÖAW Vienna): the open-access
+      <a href="https://library.oapen.org/handle/20.500.12657/29398"><em>Inscriptions in Byzantium and Beyond: Methods &ndash; Projects &ndash; Case Studies</em></a>
+      (2015) &mdash; the first collective volume on the subject &mdash; whose opening chapter,
+      <a href="https://austriaca.at/0xc1aa5572%200x00321984.pdf">&ldquo;A Short History of Byzantine Epigraphy,&rdquo;</a> is a free standalone PDF;
+      and <em>Studies in Byzantine Epigraphy</em> (Brepols, 2023&ndash;, some chapters open via Oxford ORA). Rhoby&rsquo;s multi-volume
+      <em>Byzantinische Epigramme</em> edits the Byzantine verse inscriptions (some volumes on archive.org). The comprehensive
+      <strong>Handbook of Byzantine Epigraphy</strong> (Rhoby &amp; Toth) is announced but <em>not yet published</em> &mdash; one to watch.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://icg.uni-kiel.de/">Inscriptiones Christianae Graecae (ICG)</a></span>
+    <span class="badge b-free">FREE</span> <span class="badge b-cc">partly CC</span>
+    <span class="note">The key database for early Christian <strong>Greek</strong> inscriptions of Asia Minor and Greece (ca.
+      2nd&ndash;6th c. CE): 4,700+ inscriptions, 6,500+ images, each with Greek text, German/English translation, apparatus,
+      and commentary. Kiel University (from the Topoi cluster); a base version is open access via
+      <a href="http://www.epigraph.topoi.org/">edition Topoi</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://insaph.kcl.ac.uk/ala2004.html">Aphrodisias in Late Antiquity (ALA2004) / Inscriptions of Aphrodisias (IAph)</a></span>
+    <span class="badge b-cc">CC BY</span>
+    <span class="note">Charlotte Roueché&rsquo;s electronic corpus of ~1,600 inscriptions from Aphrodisias (SW Turkey), Hellenistic
+      through Late Antique, richly annotated in EpiDoc. The flagship for Anatolian late-Roman/Byzantine epigraphy; hosted at
+      <a href="https://insaph.kcl.ac.uk/">INSAPH</a> (King&rsquo;s College London).</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://www.edr-edr.it/">Epigraphic Database Roma (EDR)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Greek and Latin inscriptions of Italy, Sardinia, and Sicily through the 7th c. CE (71,000+ texts, with
+      images) &mdash; excluding the Christian ones covered by EDB. An EAGLE founding database.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.edb.uniba.it/">Epigraphic Database Bari (EDB)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Inscriptions by Christians in Rome, 3rd&ndash;8th c. CE &mdash; a digital, updated <em>Inscriptiones Christianae
+      Urbis Romae</em> (~50,000 texts), with links to images held by the Pontifical Commission for Sacred Archaeology.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://isicily.org/">I.Sicily</a></span>
+    <span class="badge b-cc">CC BY</span>
+    <span class="note">Open digital corpus of the inscriptions of Sicily across all periods and languages (Greek, Latin, Oscan,
+      Punic&hellip;), including late-antique and Byzantine material. EpiDoc, with images.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://edizioniquasar.it/collections/iscrizioni-greche-ditalia/epigrafia">Iscrizioni Greche d&rsquo;Italia (IGI)</a></span>
+    <span class="badge b-sub">PRINT</span>
+    <span class="note">The modern corpus replacing the Italian portion of <em>IG</em> XIV: full editions with photographs and
+      commentary, region by region (Edizioni Quasar). Primarily print, but the authoritative reference for Greek Italy.</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://amsacta.unibo.it/2494/1/epigrafi_greche_bizantine_16_luglio_08_2.pdf">F. Fiori, <em>Epigrafi greche dell&rsquo;Italia bizantina (VII&ndash;XI sec.)</em></a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">Open-access study (Bologna, AMS Acta) of Greek inscriptions from Byzantine Italy &mdash; a focused way into
+      the medieval Greek of the peninsula. Compare A. Guillou, <em>Recueil des inscriptions grecques médiévales d&rsquo;Italie</em>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://www.libridergi.org/">LIBRI &mdash; Epigrafi, Çeviri ve Eleştiri Dergisi</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Turkish open-access review journal on epigraphy, translation, and criticism &mdash; a window onto epigraphic
+      scholarship on Anatolia (which holds a vast share of Greek inscriptions).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://kayipdiller.com/">Kayıp Diller (&ldquo;Lost Languages&rdquo;)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">A Turkish public-humanities site with accessible exhibitions on the coming of writing to Anatolia and on
+      <em>Byzantine / medieval Greek</em> &mdash; useful orientation material, in Turkish.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.dbmnt.uw.edu.pl/">DBMNT &mdash; Database of Medieval Nubian Texts</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">4,500+ texts from Christian Nubia (6th&ndash;15th c. CE) in Greek, Coptic, and Old Nubian &mdash; epitaphs and
+      inscriptions with transcriptions and translations (University of Warsaw). Greek persisted as a liturgical and epigraphic language on
+      the Middle Nile long after the Arab conquest &mdash; the southern edge of the Byzantine Greek world.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="regional"><span class="n">12</span>Regional &amp; bilingual corpora (Greek-inclusive)</h2>
+<p>Region-specific corpora &mdash; some wholly Greek, some mixing Greek with Latin (and at times Hebrew, Aramaic, or
+   Etruscan). Purely Latin databases (CIL, Clauss-Slaby/EDCS, and the like) are deliberately left out.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://iospe.kcl.ac.uk/corpus/index.html">IOSPE &mdash; Ancient Inscriptions of the Northern Black Sea</a></span>
+    <span class="badge b-cc">CC</span>
+    <span class="note">A modern online edition of ~4,000 <strong>predominantly Greek</strong> inscriptions from Tyras, Olbia,
+      Chersonesos, and the Bosporan kingdom, c. 600 BCE&ndash;1400 CE &mdash; with a whole
+      <a href="https://iospe.kcl.ac.uk/corpora/byzantine/index.html">Byzantine volume</a>. EpiDoc, richly indexed (KCL).
+      Excellent for both the Classical and Byzantine ends of your range.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.inscriptionsisraelpalestine.org/">Inscriptions of Israel/Palestine (IIP)</a></span>
+    <span class="badge b-cc">CC BY-NC</span>
+    <span class="note">4,000+ inscriptions in Greek, Latin, Hebrew, and Aramaic, c. 6th c. BCE&ndash;7th c. CE &mdash; a large,
+      Greek-rich late-antique corpus. CC BY-NC 4.0; XML downloadable individually, in bulk from
+      <a href="https://github.com/Brown-University-Library/iip-texts">GitHub</a>, or via API (Brown).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.degruyterbrill.com/serial/ciip-b/html">CIIP &mdash; Corpus Inscriptionum Iudaeae/Palaestinae</a></span>
+    <span class="badge b-sub">PRINT</span>
+    <span class="note">The authoritative multilingual corpus (Greek, Latin, Hebrew, Aramaic, Syriac, Armenian) of all inscriptions of
+      Israel/Palestine from Alexander to the Arab conquest &mdash; <strong>Vol. I is Jerusalem</strong>, covering the Byzantine city
+      before 638 CE. Print (De Gruyter); some volumes scanned on
+      <a href="https://archive.org/details/corpusinscriptio0000unse_v5l8">archive.org</a>. The print counterpart to the digital IIP above.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.iaa.org.il/">Israel Antiquities Authority (IAA)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Israel&rsquo;s statutory archaeology body: no single Greek-inscriptions database, but the institution behind new finds,
+      with an <a href="https://service.israntique.org.il/">online services portal</a>, digital archives, the National Library for
+      Archaeology, and the excavation journal <em>Hadashot Arkheologiyot</em> &mdash; where Byzantine mosaic inscriptions regularly
+      surface. Restored church pavements are displayed at the <a href="https://www.imj.org.il/en">Israel Museum</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://usepigraphy.brown.edu/">U.S. Epigraphy Project (USEP)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">~3,500 Greek and Latin inscriptions held in U.S. collections (ca. 800 BCE&ndash;700 CE), with ~1,000 images
+      and ~300 paper squeezes of Greek inscriptions from Attica and Asia Minor (Brown). Browse or search by language,
+      date, origin, and material.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://telamon.uni-sofia.bg/index">Telamon &mdash; Ancient Greek Inscriptions from Bulgaria</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Sofia University&rsquo;s bilingual digital corpus of 4,000+ Greek inscriptions from ancient Thrace and
+      Moesia (6th c. BCE&ndash;6th c. CE), revising Mihailov&rsquo;s <em>Inscriptiones Graecae in Bulgaria repertae</em> (IGBulg)
+      and Beševliev&rsquo;s late-antique corpus, with translations, images, and search &mdash; Classical through early Byzantine.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://igcyr.unibo.it/">IGCyr &amp; GVCyr &mdash; Inscriptions of Greek Cyrenaica</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">~950 inscriptions plus ~59 verse inscriptions from Cyrenaica (eastern Libya), TEI-EpiDoc, open access and
+      multilingual (English, French, Italian, Arabic), with the fullest available images, squeezes, and drawings (Bologna).
+      Thoroughly Greek.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://amm.org.mk/en/epigraphy-and-stone-sculptures/">Archaeological Museum of North Macedonia &mdash; Epigraphy &amp; Stone Sculpture</a></span>
+    <span class="badge b-ask">ASK</span>
+    <span class="note">The main institutional collection for ancient Macedonia and Paeonia (Greek and Latin inscriptions; English
+      interface). No dedicated open text corpus &mdash; much of the Greek material is edited in <em>IG</em> X (Macedonia) and,
+      for Upper Macedonia, in the EAM corpus available through Pandektis (§10).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://cefael.efa.gr/">CIGIME &mdash; Inscriptions grecques d&rsquo;Illyrie méridionale et d&rsquo;Épire</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Cabanes et al.&rsquo;s corpus of the Greek inscriptions of <strong>Albania</strong> and Epirus &mdash; Apollonia,
+      Epidamnos-Dyrrhachion, Bouthrotos, and Molossia. Print (École française d&rsquo;Athènes), with older volumes readable through
+      the EfA&rsquo;s open digital library <em>CEFAEL</em>. The standard route into Greek Illyria; there is no native Albanian database.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://igls.mom.fr/">IGLS &mdash; Inscriptions grecques et latines de la Syrie</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The corpus of Greek &amp; Latin inscriptions of ancient Syria &mdash; today&rsquo;s <strong>Syria, Lebanon, and
+      Jordan</strong> (including the <em>Inscriptions de la Jordanie</em> sub-series). Run from Lyon (HiSoMA) and Beirut (Ifpo); an
+      EpiDoc edition is under way, and the ~20 published volumes are free on
+      <a href="https://www.persee.fr/collection/bah">Persée</a>. Rich in late-antique/Byzantine church inscriptions. (The digital
+      infrastructure is French/IFPO, not Syrian.)</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://cpi.csad.ox.ac.uk/inscriptions/">CPI &mdash; Corpus of Ptolemaic Inscriptions</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Oxford CSAD&rsquo;s online edition of ~550 Greek, bilingual, and trilingual stone inscriptions of Ptolemaic
+      <strong>Egypt</strong> (332&ndash;30 BCE), with introductions, commentary, and images; all three volumes online (print by OUP).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://antiquities.bibalex.org/">Bibliotheca Alexandrina &mdash; Antiquities Museum</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">An <strong>Egyptian</strong> institution&rsquo;s digital catalogue (Arabic / French / English) whose largest holdings
+      are Greco-Roman; searchable, with images. Object-focused rather than a text corpus, but a rare openly-browsable Egyptian
+      collection that includes inscribed material.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://dlab.ug.edu.ge/books/detail/608">Greek Inscriptions in Georgia (T. Qaukhchishvili)</a></span>
+    <span class="badge b-ask">ASK</span>
+    <span class="note">The standard corpus of Greek inscriptions found in <strong>Georgia</strong> (Colchis &amp; Iberia), digitized in
+      Georgian university repositories (with a related bilingual monograph on <a href="https://dspace.tsu.ge/">TSU dSpace</a>);
+      access to individual scans may be limited, and there is no open interactive database.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.epigraphik.uni-hamburg.de/">EDAK &mdash; Epigraphic Database for Ancient Asia Minor</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Hamburg&rsquo;s database of the Greek &amp; Latin inscriptions of <strong>Asia Minor</strong> &mdash; 6,000+ so far from
+      Lydia, Galatia, Paphlagonia, Phrygia, and Proseilemmene, with descriptions, translations, and commentary. TEI/EpiDoc,
+      filterable, downloadable as JSON/CSV. Fills the biggest Greek zone we had only touched via Aphrodisias.</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://mama.csad.ox.ac.uk/">MAMA XI &mdash; Monumenta Asiae Minoris Antiqua</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Oxford CSAD&rsquo;s open edition of 387 monuments (292 previously unpublished) from Phrygia and Lykaonia, from the
+      1950s Calder&ndash;Ballance expeditions, with high-resolution photographs of every piece and an emphasis on the Roman and
+      Early Byzantine periods.</span>
+  </li>
+</ul>
+<p style="color:var(--muted);font-size:.9rem;">Thinner or partial coverage worth knowing: for <strong>Egypt</strong>, no
+   dedicated open epigraphic database surfaced at the American University in Cairo or the Egyptian Museum &mdash; Greek Egypt is
+   reached mainly through CPI (above), <a href="https://www.trismegistos.org/">Trismegistos</a> (see Tools &mdash; its heartland), and the
+   Bernand editions within PHI. For <strong>Jordan/Nabataea</strong>, see the open-access
+   <a href="https://edizionicafoscari.unive.it/">Corpus of Nabataean Aramaic-Greek Inscriptions</a> (Ca&rsquo; Foscari) and the
+   <a href="https://jjournals.ju.edu.jo/index.php/jjha/">Jordan Journal for History and Archaeology</a>. In the Balkans,
+   <a href="https://prometheus-epigraphy.eu/">Prometheus</a> pairs inscriptions with interactive maps and audio; and Romanian
+   <strong>Scythia Minor</strong> (Histria, Tomis, Callatis) is served by the print <em>ISM</em> and PHI&rsquo;s
+   <a href="https://epigraphy.packhum.org/regions/1674">Scythia Minor</a> region &mdash; mixed Greek/Latin, no dedicated open Greek corpus.</p>
+
+<!-- ============================================================= -->
+<h2 id="papyri"><span class="n">13</span>Adjacent field: Greek papyri</h2>
+<p>Papyri are a different medium from stone, but they preserve everyday and cursive Greek hands &mdash; a further set of
+   &ldquo;forms&rdquo; of the written language. The essentials (the net-new from the CUA guide, which is otherwise papyrology or
+   Latin epigraphy we already cover):</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://papyri.info/">Papyri.info</a></span>
+    <span class="badge b-cc">CC</span>
+    <span class="note">The central aggregator &mdash; the Duke Databank of Documentary Papyri (DDbDP), HGV, and APIS searchable together,
+      with EpiDoc texts. First stop for documentary Greek papyri.</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://www.papyrology.ox.ac.uk/POxy/">POxy: Oxyrhynchus Online</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The Oxyrhynchus finds &mdash; literary and documentary papyri, searchable by publication number, author, genre, and
+      date, with images.</span>
+  </li>
+  <li>
+    <span class="title"><a href="http://www.papyrusportal.de/content/start.xml?lang=en">Papyrus Portal &amp; national collections</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Gateway to the German papyrus collections; comparable image collections exist at Heidelberg, Leipzig/Halle/Jena,
+      the Sorbonne, and (via CSAD) the <a href="http://ipap.csad.ox.ac.uk/index.shtml">Cairo Museum papyri</a>. Trismegistos (see Tools)
+      is the natural bridge between papyri and inscriptions.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="lowcountries"><span class="n">14</span>Low Countries &amp; Nordic scholarship hubs</h2>
+<p>As you anticipated, these are mostly <em>scholarship</em> &mdash; publishers, institutes, and teaching portals &mdash; rather
+   than find-spots, since the region lay in the Latin West. A few are indispensable even so.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://brill.com/display/db/sego">Brill &amp; SEG Online (Leiden)</a></span>
+    <span class="badge b-sub">SUBSCRIPTION</span>
+    <span class="note">Brill, the Leiden publisher (founded 1683), issues the <em>Supplementum Epigraphicum Graecum</em> &mdash; the
+      annual survey of new Greek inscriptions (archaic&ndash;8th c. CE), with faceted search by date, place, topic, and type
+      (cross-ref §7). Brill also publishes CIIP (§12) and much of the corpus literature.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.trismegistos.org/">KU Leuven &mdash; Trismegistos &amp; LDAB</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Leuven (Belgium) is home to <strong>Trismegistos</strong> (the cross-database identifier hub &mdash; see Tools) and
+      the <a href="https://www.trismegistos.org/ldab/">Leuven Database of Ancient Books (LDAB)</a>, an overview of all literary
+      manuscripts of antiquity to 800 CE.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.heuristiek.ugent.be/klassieke-oudheid/epigrafie/">Ghent &mdash; Digitaal Platform Historische Praktijk</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">A Dutch-language teaching/heuristics portal (Ghent University) with practical pages on Greek inscriptions, the
+      databases, and the tools of the trade &mdash; a good methods primer if you read Dutch. KU Leuven has a parallel
+      <a href="https://www.arts.kuleuven.be/grieks/heuristiek/paleografie">epigraphy / papyrology / palaeography</a> guide.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.sia.gr/">Swedish Institute at Athens &amp; Opuscula</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">A foreign school in Greece (est. 1946) whose excavations produced Greek-inscription corpora &mdash; notably
+      Crampa&rsquo;s <em>Labraunda: The Greek Inscriptions</em> &mdash; published in <em>Opuscula</em> and the Acta series
+      (<a href="https://ecsi.se/">ecsi.se</a>), largely open access.</span>
+  </li>
+</ul>
+<p style="color:var(--muted);font-size:.9rem;"><strong>Denmark</strong> is thin for Greek epigraphy specifically: Copenhagen&rsquo;s
+   strengths are the P.Haun papyri (§13) and a world-class Greek coin cabinet, not an inscriptions corpus; Danish and Aarhus
+   scholarship reaches Greek inscriptions through the international databases already listed.</p>
+
+<!-- ============================================================= -->
+<h2 id="genres"><span class="n">15</span>Other scripts &amp; genres of written Greek</h2>
+<p>Greek was written in far more than the monumental stone-cut alphabet &mdash; on clay, pottery, lead, metal, and plaster. These
+   corpora cover the forms most unlike the standard lapidary script: the earliest syllabic Greek, a parallel syllabary, the informal
+   everyday hands, the miniature legends of coins and seals, and scratched graffiti &mdash; exactly the &ldquo;various forms&rdquo; you're after.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://damos.hf.uio.no/">DAMOS &mdash; Database of Mycenaean at Oslo (Linear B)</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The annotated corpus of <strong>all published Mycenaean texts</strong> &mdash; the earliest Greek (c. 15th&ndash;12th c.
+      BCE), in the <em>Linear B</em> syllabary. Full transliterations, metadata, and epigraphical/morphological/syntactic annotation with
+      word search (University of Oslo). Pair with <a href="https://liber.cnr.it/">LiBER</a> (CNR) for the tablets of Mycenae, Tiryns, and
+      Midea with photographs and apparatus.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://kyprioscharacter.eie.gr/">Kyprios Character &mdash; Cypriot syllabic inscriptions</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The National Hellenic Research Foundation&rsquo;s searchable corpus of 1,300+ inscriptions in the
+      <strong>Cypriot syllabary</strong> &mdash; the non-alphabetic script that wrote Greek on Cyprus into the Hellenistic period. Builds
+      on Masson&rsquo;s <em>ICS</em>; the print corpus continues as <em>IG</em> XV.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://avi.unibas.ch/">AVI &mdash; Attic Vase Inscriptions</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">Basel&rsquo;s database of ~8,000 inscriptions painted or scratched on Attic vases (extending Immerwahr&rsquo;s CAVI):
+      potter/painter signatures, mythological labels, <em>kalos</em> praises, &ldquo;nonsense&rdquo; strings, and speech captions &mdash;
+      the informal, archaic-lettered end of Greek writing. Linked to the <a href="https://www.carc.ox.ac.uk/carc/pottery">Beazley Archive</a>.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.thedefix.uni-hamburg.de/">TheDefix &mdash; Thesaurus Defixionum</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">An open corpus of ancient <strong>curse tablets</strong> (Greek <em>katadesmoi</em>, Latin <em>defixiones</em>),
+      5th c. BCE&ndash;5th c. CE, with texts, images, and bibliography (Hamburg; successor to TheDeMa). Cursive, colloquial, often magical
+      Greek on lead &mdash; a very different register.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.doaks.org/visit/museum/collections/coins-and-seals">Byzantine coins &amp; lead seals &mdash; Dumbarton Oaks</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">The world&rsquo;s foremost collection (~17,500 coins + ~17,000 seals), with open online catalogues searchable by legend,
+      issuer, mint, date, and metal, plus images. <strong>Byzantine coin legends and seal inscriptions are Greek</strong> (increasingly so
+      from the 7th c.) &mdash; a vast, closely dated epigraphic corpus. Digital seal editions abound:
+      <a href="https://zacos.sigidoc.huma-num.fr/">SigiDoc / Zacos</a> (Paris; TEI-XML for seals),
+      <a href="https://ifa.phil-fak.uni-koeln.de/en/forschung/byzantinistik-und-neugriechische-philologie-forschung/drittmittel-projekte/digibyzseal">DigiByzSeal</a>
+      (Cologne; ~4,000 seals, open source), the <a href="https://www.oeaw.ac.at/en/imafo/research/byzantine-research/communities-and-landscapes/sigillography">ÖAW sigillography</a>
+      group (Vienna), and <a href="https://pbw.kcl.ac.uk/">PBW</a> (prosopography built largely from seals). Coin-find contexts:
+      <a href="https://byzantine.units.it/en/">Nomismata</a> (Trieste).</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.oeaw.ac.at/en/byzanz/gesellschaft-und-landschaft/epigraphik/epigraphies-of-pious-travel">Greek &amp; Byzantine graffiti</a></span>
+    <span class="badge b-ask">MIXED</span>
+    <span class="note">The scratched, informal register. <strong>Epigraphies of Pious Travel</strong> (ÖAW Vienna / HSE) is editing the Greek
+      pilgrim graffiti of the eastern Mediterranean (c. 300&ndash;1500 CE) into a forthcoming open OpenAtlas database. The richest single
+      hoard is the <a href="https://www.smyrnaagorasi.com/en/museum/basilica-wall-inscriptions-graffiti/">Basilica of Smyrna</a> (published
+      by Bagnall et al., ISAW/NYU &mdash; print). See also the print <em>Corpus of Greek Graffiti from Dalmatia</em>, the medieval graffiti
+      of St Sophia in Kyiv (Vysotsky), and a digital corpus of painted Greek (Byzantine) inscriptions from
+      <a href="https://www.ucy.ac.cy/byz2/">Cyprus</a>.</span>
+  </li>
+</ul>
+
+<!-- ============================================================= -->
+<h2 id="conventions"><span class="n">16</span>Editorial conventions &amp; digital tools</h2>
+<p>How editions encode damage, restorations, and abbreviations &mdash; you must read these fluently to use any corpus.</p>
+<ul class="res">
+  <li>
+    <span class="title"><a href="https://en.wikipedia.org/wiki/Leiden_Conventions">The Leiden Conventions</a></span>
+    <span class="badge b-cc">CC BY-SA</span>
+    <span class="note">The bracket system: <code>[ ]</code> restoration, <code>( )</code> expanded abbreviation,
+      <code>&lt; &gt;</code> editorial addition, dots for uncertain letters, etc. Learn this first.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://epidoc.stoa.org/">EpiDoc</a></span>
+    <span class="badge b-free">FREE / PD</span>
+    <span class="note">The TEI-XML standard for digital epigraphic editions (used by AIO, EDH, and others). Relevant if you
+      want to keep your transcriptions in a structured, portable format.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://github.com/google-deepmind/ithaca">Ithaca &amp; Pythia (Google DeepMind + Oxford/Venice)</a></span>
+    <span class="badge b-free">OPEN SOURCE</span>
+    <span class="note">Deep-learning tools that restore missing text and help date and localize Greek inscriptions, trained on
+      ~78,000 texts from PHI. Open source on GitHub, with an interactive demo at
+      <a href="https://ithaca.deepmind.com/">ithaca.deepmind.com</a>; background from
+      <a href="https://deepmind.google/discover/blog/predicting-the-past-with-ithaca/">DeepMind</a>. A curiosity and aid, not a crutch.</span>
+  </li>
+  <li>
+    <span class="title"><a href="https://www.trismegistos.org/">Trismegistos</a></span>
+    <span class="badge b-free">FREE</span>
+    <span class="note">A cross-database hub of stable identifiers linking the same inscription or text across the major corpora &mdash;
+      handy for chasing one document through PHI, EDH, and others.</span>
+  </li>
+</ul>
+
+<footer>
+  <p>Badges reflect what was stated at the time of compiling (1 July 2026); confirm the current terms on the source site
+     before any public reuse. Links were gathered during a research pass and point to the projects&rsquo; own pages where
+     possible.</p>
+</footer>
+
+</div>
+</body>
+</html>

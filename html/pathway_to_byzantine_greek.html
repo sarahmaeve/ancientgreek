@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pathway to Byzantine Greek — From Zero to the Reading List</title>
+<style>
+  :root {
+    --ink: #1f1c16;
+    --paper: #faf7f0;
+    --accent: #7a3b2e;
+    --accent2: #2e5246;
+    --line: #d9d0bd;
+    --free: #2e5246;
+    --collection: #8a6d1f;
+    --commercial: #7a3b2e;
+    --uncertain: #999;
+    --stage: #3a4f7a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+    line-height: 1.55;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.6rem;
+  }
+  .subtitle {
+    color: #5a5448;
+    font-size: 0.98rem;
+    margin-bottom: 1.6rem;
+    font-style: italic;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    font-size: 0.82rem;
+    margin: 1.2rem 0 2rem;
+    padding: 0.8rem 1rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .dot { width: 0.7em; height: 0.7em; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .dot.free { background: var(--free); }
+  .dot.collection { background: var(--collection); }
+  .dot.commercial { background: var(--commercial); }
+  .dot.uncertain { background: var(--uncertain); }
+  .tag { border-radius: 3px; padding: 0.02rem 0.4rem; font-size: 0.72rem; font-weight: 700; margin-left: 0.4rem; }
+  .tag.greek { background: #eef3ee; color: var(--free); border: 1px solid var(--free); }
+  .tag.fr { background: #eef1f7; color: var(--stage); border: 1px solid var(--stage); }
+  .tag.core { background: #f7eeee; color: var(--accent); border: 1px solid var(--accent); }
+
+  .notice {
+    background: #fff8e8;
+    border: 1px solid #e6d28a;
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+  }
+  .notice strong { color: var(--accent); }
+
+  .roadmap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1.5rem 0 2.5rem;
+    font-size: 0.78rem;
+  }
+  .roadmap .step {
+    background: var(--stage);
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .roadmap .arrow { align-self: center; color: var(--stage); font-weight: 700; }
+
+  h2.stage {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    color: var(--stage);
+    border-bottom: 2px solid var(--stage);
+    padding-bottom: 0.4rem;
+  }
+  .stage-intro {
+    font-size: 0.93rem;
+    color: #4a4438;
+    margin: 0.6rem 0 1.2rem;
+    background: #fff;
+    border-left: 3px solid var(--stage);
+    padding: 0.7rem 1rem;
+  }
+
+  .entry {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 1.1rem;
+    background: #fff;
+    overflow: hidden;
+  }
+  .entry-head {
+    background: #f1ead9;
+    padding: 0.65rem 1rem;
+    font-size: 1.03rem;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+  .entry-body { padding: 0.7rem 1.1rem 0.9rem; font-size: 0.93rem; }
+  .src-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    margin: 0.32rem 0;
+    flex-wrap: wrap;
+  }
+  .src-row .dot { margin-top: 0.35em; }
+  .src-label { font-weight: 600; min-width: 5.4rem; color: #4a4438; font-size: 0.83rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .src-row a { color: var(--accent2); text-decoration: none; border-bottom: 1px dotted var(--accent2); }
+  .src-row a:hover { color: var(--accent); }
+  .note { color: #6b6356; font-size: 0.85rem; margin-top: 0.4rem; }
+
+  .fork {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 1.8rem;
+  }
+  .fork-col {
+    flex: 1;
+    min-width: 260px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+  }
+  .fork-col h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--stage);
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #8a8270;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>Pathway to Byzantine Greek</h1>
+<p class="subtitle">A graduated plan from zero Greek to the PhD-level reading list, with sources for every stage. Compiled June 2026.</p>
+
+<div class="legend">
+  <span><span class="dot free"></span> Free, non-commercial source</span>
+  <span><span class="dot commercial"></span> Commercial / paid</span>
+  <span><span class="tag greek">GR</span> Greek-language source</span>
+  <span><span class="tag fr">FR</span> French-medium</span>
+  <span><span class="tag core">KEY</span> the centerpiece recommendation for that stage</span>
+</div>
+
+<div class="roadmap">
+  <span class="step">Stage 0: Ancient Greek (optional)</span><span class="arrow">→</span>
+  <span class="step">Stage 1: Koine bridge</span><span class="arrow">→</span>
+  <span class="step">Stage 2: Orientation reading</span><span class="arrow">→</span>
+  <span class="step">Stage 3: First Byzantine Greek (IBGSS)</span><span class="arrow">→</span>
+  <span class="step">Stage 4: Graded Byzantine reading</span><span class="arrow">→</span>
+  <span class="step">Stage 5: University-level course</span><span class="arrow">→</span>
+  <span class="step">Stage 6: PhD reading list</span>
+</div>
+
+<div class="notice">
+<strong>Two routes, one destination.</strong> There are genuinely two ways to get to Byzantine Greek, and they converge. The <strong>traditional route</strong> goes Ancient Greek → Koine/Biblical Greek → Byzantine Greek via a university course that assumes you already read Ancient Greek (this is how UCLouvain's "Grec byzantin" and most university courses work — see our earlier research). The <strong>direct route</strong> skips straight to Byzantine Greek with a course built for true beginners, using Byzantine texts themselves as the teaching material from day one. I've built this plan around both, with the direct route as the headline recommendation since it's the fastest way to your actual goal, and the traditional route kept as a parallel option since it's more widely available and dovetails with everything we found for the PhD list.
+</div>
+
+<h2 class="stage">Stage 0 — Ancient (Attic) Greek foundations <em style="font-weight:400; font-size:0.85rem;">(optional — skip if taking the direct route)</em></h2>
+<div class="stage-intro">Needed only if you want to go the traditional route, or if you'd simply like Attic literature to be readable too. Several university Byzantine Greek courses (UCLouvain among them) list this as a hard prerequisite.</div>
+
+<div class="entry">
+  <div class="entry-head">English-medium textbooks</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <em>Athenaze: An Introduction to Ancient Greek</em> (Balme, Lawall, Miraglia) — the most widely used current course; continuous narrative, gentle progression</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> <em>Reading Greek</em> (JACT / Cambridge University Press) — similarly reading-led, one-year intensive course</div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://lsj.gr/wiki/LSJ:Learn_Greek" target="_blank">lsj.gr's "Learn Ancient Greek" page</a> and <a href="https://www.textkit.com" target="_blank">Textkit.com</a> — both aggregate dozens of pre-1923 public-domain grammars (Goodwin, White's <em>First Greek Book</em>, Pharr's <em>Homeric Greek</em>, etc.) as free PDFs</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">French-medium textbook <span class="tag fr">FR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Jean-Victor Vernhes, <em>Ἕρμαιον (Hermaion): Initiation au grec ancien</em> (Ophrys) — the standard contemporary French introductory textbook, widely used in French universities; pairs naturally with UCLouvain-style programs later on</div>
+  </div>
+</div>
+
+<h2 class="stage">Stage 1 — The Koine bridge</h2>
+<div class="stage-intro">Worth doing even if you're taking the direct route: Koine is the actual historical starting point of Byzantine Greek (see our first conversation on this), the grammar is genuinely simpler than Attic, and the free material is abundant. This is also literally what several university programs pair with Byzantine Greek (e.g. UCLouvain's "Grec biblique et byzantin" track runs NT/OT Greek alongside Byzantine Greek).</div>
+
+<div class="entry">
+  <div class="entry-head">Grammar</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/newtestamentgree00mach" target="_blank">Archive.org — J. Gresham Machen, <em>New Testament Greek for Beginners</em> (1923)</a></div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://www.textkit.com" target="_blank">Textkit.com — F.C. Conybeare & St. George Stock, <em>Grammar of Septuagint Greek</em> (1905)</a> — useful since LXX Greek is even closer in register to a lot of Byzantine prose than the NT is</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> William Mounce, <em>Basics of Biblical Greek</em>, or N. Clayton Croy, <em>A Primer of Biblical Greek</em> — the two most commonly used current classroom textbooks, if you'd rather have something modern and in print</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Reading texts</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://sblgnt.com/" target="_blank">SBLGNT</a> — a full critically-edited Greek New Testament, free under CC-BY 4.0, the obvious first reading text <span class="tag greek">GR</span></div>
+    <div class="note">Once you can read the Gospels and Acts with reasonable fluency, you already have real traction on a large fraction of Byzantine vocabulary and syntax — biblical language is the deepest substrate of the whole tradition, quoted and echoed constantly by Byzantine authors of every register.</div>
+  </div>
+</div>
+
+<h2 class="stage">Stage 2 — Orientation reading (do this in parallel with Stage 0/1 or Stage 3)</h2>
+<div class="stage-intro">Not a language course — a conceptual map of what you're walking into, so the grammar you're learning has a historical home. Short investment, high payoff.</div>
+
+<div class="entry">
+  <div class="entry-head">The two essential overviews</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Geoffrey Horrocks, <em>Greek: A History of the Language and its Speakers</em> (2nd ed., Wiley-Blackwell) — read Part 2 ("Byzantium") specifically</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Commercial</span> Robert Browning, <em>Medieval and Modern Greek</em> (2nd ed., Cambridge UP) — shorter, older, still a clean survey</div>
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://assets.cambridge.org/97805211/95294/frontmatter/9780521195294_frontmatter.pdf" target="_blank">Cambridge Grammar of Medieval and Early Modern Greek — General Introduction (free PDF)</a> — explains the diglossia, periodization, and source-text methodology that everything downstream depends on</div>
+  </div>
+</div>
+
+<h2 class="stage">Stage 3 — First contact with Byzantine Greek <span class="tag core">KEY</span></h2>
+<div class="stage-intro">This is the centerpiece of the whole plan: a real, current, structured course that teaches Byzantine Greek <em>as itself</em>, from the alphabet up, with no Ancient Greek required.</div>
+
+<div class="entry">
+  <div class="entry-head">International Byzantine Greek Summer School (IBGSS) — Trinity College Dublin</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Course</span> <a href="https://www.tcd.ie/classics/byzantine/" target="_blank">tcd.ie/classics/byzantine</a> — €375 for two weeks, runs online, small groups</div>
+    <div class="note">
+    <strong>Level 1 (Beginners)</strong> — explicitly "designed for those with no previous knowledge of Greek." Two weeks, two 2-hour sessions daily. Starts with the alphabet, covers noun/adjective declensions, core pronouns, and the indicative/infinitive/participial forms of present and aorist, with a taste of future, perfect, and subjunctive. Students read real Byzantine text extracts from day one with full vocabulary support, and finish able to translate simple passages with a dictionary. Uses Modern Greek pronunciation throughout (closer to actual Byzantine pronunciation than the Erasmian system used for Classical Greek).<br><br>
+    <strong>Level 2/2.5 (Intermediate/Higher Intermediate)</strong> — assumes Level 1 or equivalent (a school/university Ancient Greek course counts). Completes basic grammar (future, perfect, subjunctive, optative) and moves into genre reading: selections from Theophanes' <em>Chronographia</em>, the Liturgy of St. John Chrysostom, and a saint's life are the typical texts — note Theophanes is also on the Harvard PhD reading list we built, so this is direct preparation for it.<br><br>
+    <strong>Level 3 (Advanced Reading)</strong> — no fixed syllabus; students propose texts and the course reads widely across genres, registers, and periods (late Byzantine vernacular included), with optional palaeography sessions.
+    </div>
+    <div class="note">Directed by Dr Anthony Hirst, running continuously since 2002 (Belfast → Birmingham → Dublin). 2026 dates: Level 1, 20–31 July; Levels 2/2.5 and 3, 3–14 August.</div>
+  </div>
+</div>
+
+<div class="fork">
+  <div class="fork-col">
+    <h3>If you can't attend IBGSS</h3>
+    Self-study substitute: do Stage 0 + Stage 1 thoroughly (Attic or Koine grammar gets you most of the morphology IBGSS Level 1 covers), then jump straight into Stage 4's graded readings below, leaning hard on the bilingual texts. It's a slower, lonelier version of the same path, but it works.
+  </div>
+  <div class="fork-col">
+    <h3>A complementary, non-required track: Modern Greek</h3>
+    Because Byzantine pronunciation is essentially Modern Greek pronunciation (as IBGSS itself teaches), and because the vernacular texts on the PhD list (Digenes Akrites, Ptochoprodromos, the Lament for Constantinople) read far more transparently to a Modern Greek speaker than to an Atticist, some learners find real value in parallel basic Modern Greek study — useful but optional, and not a substitute for the grammar work above.
+  </div>
+</div>
+
+<h2 class="stage">Stage 4 — Graded Byzantine readings (build confidence before the heavy texts)</h2>
+<div class="stage-intro">Short, accessible, free, bilingual-where-possible texts to read once you have basic morphology under control (post-IBGSS Level 1, or post-Stage 0/1 if self-studying). Several of these are entries on the PhD reading list itself — so this stage doubles as early, gentle contact with material you'll need anyway.</div>
+
+<div class="entry">
+  <div class="entry-head">Life of Mary of Egypt (Sophronios of Jerusalem)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://immorfou.org.cy/%CE%B2%CE%B9%CE%BF%CF%82-%CE%BF%CF%83%CE%B9%CE%B1%CF%82-%CE%BC%CE%B1%CF%81%CE%B9%CE%B1%CF%82-%CF%84%CE%B7%CF%82-%CE%B1%CE%B9%CE%B3%CF%85%CF%80%CF%84%CE%B9%CE%B1%CF%82/" target="_blank">Full Greek text, Holy Metropolis of Morfou</a> <span class="tag greek">GR</span></div>
+    <div class="note">A classic "first real text" choice in Byzantine Greek pedagogy: straightforward narrative hagiography, simple syntax, vivid plot (desert hermit meets a former prostitute turned ascetic), no dense theology to wade through. Not on the PhD list itself, but a gentle warm-up for the hagiographic register that <em>is</em> on it (Leontios of Neapolis, Symeon Metaphrastes).</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Akathistos Hymn</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/hoakathistoshymn0000orth" target="_blank">Bilingual Greek–English edition, archive.org</a> <span class="tag greek">GR</span></div>
+    <div class="note">Highly repetitive refrain structure ("Χαῖρε...") makes it unusually approachable for an early reader. Core item on the PhD list — you'll have already read it.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Lament for Constantinople (Ανακάλημα της Κωνσταντινόπολης)</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://dimodis.greeklanguage.gr/images/pdf/29.pdf" target="_blank">Full text, Centre for the Greek Language</a> <span class="tag greek">GR</span></div>
+    <div class="note">Only 118 lines, vernacular register (closer to Modern Greek than to Atticizing prose), vivid narrative. Also on the PhD list.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Romanos Melodos — selected Kontakia</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://archive.org/details/analectasacrasp05pitrgoog" target="_blank">Greek text (Pitra)</a> <span class="tag greek">GR</span> + <a href="https://archive.org/details/kontakiaofromano00roma" target="_blank">English translation (Carpenter)</a></div>
+    <div class="note">Poetic but liturgical/narrative rather than rhetorically dense; many kontakia retell familiar biblical stories, so Stage 1's Gospel reading pays off directly here. On the PhD list.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">Digenes Akrites</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot free"></span><span class="src-label">Free</span> <a href="https://ia801209.us.archive.org/26/items/DigenesAkritesGreekEnglish/Digenes_Akrites_Greek_English.pdf" target="_blank">Full bilingual Greek–English edition (Mavrogordato)</a> <span class="tag greek">GR</span></div>
+    <div class="note">Longer and more demanding than the others here, but the facing English translation makes it usable as a graded reader even before you're fully independent — and it's the one "core, no-substitution" text on the PhD list, so building familiarity early is worth it.</div>
+  </div>
+</div>
+
+<h2 class="stage">Stage 5 — A real university-level Byzantine Greek course</h2>
+<div class="stage-intro">Once Stage 3/4 is solid, this is where you plug into the academic courses we researched earlier in this conversation.</div>
+
+<div class="entry">
+  <div class="entry-head">English-medium</div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Course</span> IBGSS Levels 2/2.5 and 3 (above) — designed to be returned to year after year</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Course</span> <a href="https://www.doaks.org/events/byzantine-studies/greek-summer-school" target="_blank">Dumbarton Oaks Greek Summer School</a> — graduate-level, prerequisite of 2 years college Ancient Greek; reads a different genre each week (historiography, hagiography, poetry, epistolography) plus palaeography</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">French-medium <span class="tag fr">FR</span></div>
+  <div class="entry-body">
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Course</span> UCLouvain's LGLOR2791/2792 "Grec byzantin: langue et textes A/B" (Véronique Somers) — full detail in our earlier research; requires prior Ancient Greek</div>
+    <div class="src-row"><span class="dot commercial"></span><span class="src-label">Course</span> Sorbonne Université's UFR de Grec, or Université de Strasbourg's distance-learning DU (includes "Grec patristique," open to external students) — both covered earlier</div>
+  </div>
+</div>
+
+<h2 class="stage">Stage 6 — The destination</h2>
+<div class="entry">
+  <div class="entry-head">The PhD reading list, fully sourced</div>
+  <div class="entry-body">
+    <div class="note">This is the document we already built together — the Harvard Byzantine Greek PhD reading list with a free or best-available source (Greek text plus English/French gloss where possible) for every entry. Everything above is designed to get you to the point where that document stops being a research artifact and starts being a syllabus.</div>
+  </div>
+</div>
+
+<footer>
+Compiled by searching current course listings, publisher catalogs, and archive.org/Gallica/Greek-language institutional sources as of June 2026. Course fees, dates, and admissions details (IBGSS, Dumbarton Oaks) change year to year — confirm directly before applying.
+</footer>
+
+</body>
+</html>
